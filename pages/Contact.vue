@@ -17,7 +17,6 @@ async function submit(form: Object) {
 
 <template>
   <div id="mainContainer">
-    <div id="title">contact</div>
     <div id="mainText">
       <div>you can contact me through LinkedIn or just drop me a mail.</div>
       <div>
@@ -88,7 +87,7 @@ async function submit(form: Object) {
 
 <style scoped lang="scss">
 #mainContainer {
-  margin: 7rem 1rem 4rem 1rem;
+  margin: 11rem 1rem 4rem 1rem;
 
   #title {
     text-align: center;
@@ -127,6 +126,11 @@ async function submit(form: Object) {
       margin: 3rem 1rem 9rem 1rem;
       padding: 1rem 0 1rem 9rem;
     }
+
+    @media (min-width: 1024px) {
+      margin: 3rem 44rem;
+      padding: 1rem 3rem;
+    }
   }
 
   #subText {
@@ -142,6 +146,10 @@ async function submit(form: Object) {
     font-size: 1.1rem;
     background: $secondary;
 
+    @media (min-width: 1024px) {
+      margin: 3rem 33rem;
+    }
+
     #nameContainer {
       margin: 2rem 0 2rem 0;
       position: relative;
@@ -149,7 +157,7 @@ async function submit(form: Object) {
       input {
         padding: 0.2rem;
         border: none;
-        background: $primary;
+        background: $bg-dark;
         font-family: "Sono";
         font-size: 1.1rem;
 
@@ -165,7 +173,7 @@ async function submit(form: Object) {
       }
 
       input:focus {
-        background: rgb(255, 255, 255);
+        background: $primary;
       }
 
       input:valid + label {
@@ -180,7 +188,7 @@ async function submit(form: Object) {
       input {
         padding: 0.2rem;
         border: none;
-        background: $primary;
+        background: $bg-dark;
         font-family: "Sono";
         font-size: 1.1rem;
 
@@ -196,7 +204,7 @@ async function submit(form: Object) {
       }
 
       input:focus {
-        background: rgb(255, 255, 255);
+        background: $primary;
       }
 
       input:valid + label {
@@ -210,15 +218,20 @@ async function submit(form: Object) {
 
       textarea {
         padding: 0.2rem;
+        margin: 0 0 3rem 0;
         height: 10rem;
         width: 16rem;
         border: none;
-        background: $primary;
+        background: $bg-dark;
         font-family: "Sono";
         font-size: 1.1rem;
 
         @media (min-width: 710px) {
           width: 35rem;
+        }
+
+        @media (min-width: 1024px) {
+          width: 40rem;
         }
       }
 
@@ -229,7 +242,7 @@ async function submit(form: Object) {
       }
 
       textarea:focus {
-        background: rgb(255, 255, 255);
+        background: $primary;
       }
 
       textarea:valid + label {
@@ -250,6 +263,13 @@ async function submit(form: Object) {
       margin: -1rem;
       font-size: 1.1rem;
       font-family: "Sono";
+      transition: 0.2s ease;
+
+      &:hover {
+        transition: 0.2s ease;
+        letter-spacing: 0.1rem;
+        cursor: crosshair;
+      }
     }
   }
 }

@@ -98,11 +98,19 @@
     margin: 1rem;
     z-index: 2;
     box-shadow: 0 0 6px 6px $bg-dark;
+
+    @media (min-width: 1024px) {
+      height: 11rem;
+    }
   }
 
   #nameTag {
     font-size: 1.5rem;
     z-index: 2;
+
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+    }
   }
 
   #backgroundElement {
@@ -127,6 +135,7 @@
       left: 0;
       right: 0;
       margin: auto;
+      height: 90px;
     }
   }
 }
@@ -137,12 +146,12 @@
   padding: 1rem 0 1rem 0;
 
   @media (min-width: 1024px) {
-    padding: 1rem 5rem;
-    margin: 5rem 11rem;
+    padding: 1rem;
+    margin: 5rem 22rem;
   }
 
   #slogan1 {
-    margin-left: 1rem;
+    margin: 2rem;
     font-size: 1.1rem;
   }
 

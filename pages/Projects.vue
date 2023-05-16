@@ -1,35 +1,48 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const projects = [
+  {
+    name: "portfolio",
+    img: "/moonwitch2.png",
+    alt: "this portfolio",
+    text1: "this portfolio. 100% built with pure scss, gsap and nuxt.",
+    text2: "simple design. purposeful animations. geometrical shapes.",
+    tools: ["vue", "gsap", "scss"],
+    code: "https://github.com/moon-witch/moonwitch",
+    codeAlt: "portfolio git repo",
+  },
+];
+</script>
 
 <template>
-  <div id="projectContainer">
-    <div id="title">projects</div>
-    <div id="cardContainer">
-      <div id="imgContainer">
-        <img src="/moonwitch2.png" alt="this portfolio" />
-      </div>
-      <div id="infoContainer">
-        <div id="text1">
-          this portfolio. 100% built with pure scss, gsap and nuxt.
+  <div id="container">
+    <div v-for="project in projects" id="projectContainer">
+      <div id="cardContainer">
+        <div id="imgContainer">
+          <img :src="project.img" :alt="project.alt" />
         </div>
-        <div id="text2">
-          simple design. purposeful animations. geometrical shapes.
-        </div>
-      </div>
-      <div id="techContainer">
-        <div id="text">
-          <div id="tools">
-            <div>vue</div>
-            <div>gsap</div>
-            <div>scss</div>
+        <div id="infoContainer">
+          <div id="name">{{ project.name }}</div>
+          <div id="text1">
+            {{ project.text1 }}
           </div>
-          <div id="code">
-            <a
-              href="https://github.com/moon-witch/moonwitch"
-              target="_blank"
-              alt="portfolio git repo"
-              rel="noopener"
-              >code</a
-            >
+          <div id="text2">
+            {{ project.text2 }}
+          </div>
+        </div>
+        <div id="techContainer">
+          <div id="text">
+            <div id="tools">
+              <div v-for="tool in project.tools">{{ tool }}</div>
+            </div>
+            <div id="code">
+              <a
+                :href="project.code"
+                target="_blank"
+                :alt="project.codeAlt"
+                rel="noopener"
+                >code</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -38,21 +51,28 @@
 </template>
 
 <style scoped lang="scss">
-#projectContainer {
-  margin: 0 0 7rem 0;
-}
+#container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 7rem 0;
 
-#title {
-  margin: 7rem 0 0 0;
-  text-align: center;
-  font-size: 1.5rem;
+  @media (min-width: 1024px) {
+    margin: 11rem 0 6rem 0;
+    padding: 0 11rem;
+  }
 }
 
 #cardContainer {
   height: 20rem;
-  margin: 2rem 1rem 0 1rem;
+  margin: 1rem;
   position: relative;
   border: 3px dashed $secondary;
+
+  @media (min-width: 1024px) {
+    width: 30vw;
+    margin: 2rem 3rem;
+  }
 
   #imgContainer {
     position: relative;
@@ -69,21 +89,33 @@
   }
 
   #infoContainer {
-    margin: 1rem;
-    position: absolute;
+    position: relative;
     height: 10rem;
-    width: 93%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 
+    #name {
+      text-align: center;
+      margin: 1rem 0 -1rem 0;
+    }
+
     #text1 {
-      margin: 1rem 0 0 0;
+      margin: 0 0 0 0.5rem;
+
+      @media (min-width: 1024px) {
+        margin: 0.5rem 0 -1rem 2rem;
+      }
     }
 
     #text2 {
       text-align: end;
-      margin: 1rem 0 4rem 0;
+      margin: 0 0 1rem 0;
+
+      @media (min-width: 1024px) {
+        margin: 0.5rem 1rem 1rem 0;
+      }
     }
   }
 
@@ -101,7 +133,6 @@
 
       #tools {
         display: flex;
-        justify-content: space-between;
         margin: 0.3rem 0.5rem 0.3rem 0;
 
         div {
@@ -112,6 +143,7 @@
       }
 
       #code {
+        display: flex;
         font-size: 1.3rem;
         margin: 0.25rem 0 0 0;
 
