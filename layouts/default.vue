@@ -75,6 +75,10 @@ let currentPath = useRoute();
   @media (min-width: 710px) {
     width: 20%;
   }
+
+  @media (min-width: 1024px) {
+    width: 7%;
+  }
 }
 
 #smallLogoContainer {
@@ -84,6 +88,10 @@ let currentPath = useRoute();
   height: 95px;
   z-index: 5;
   box-shadow: 0 0 3px 3px $bg-dark;
+
+  @media (min-width: 1024px) {
+    height: 60px;
+  }
 
   #moonwitch-logo-sm {
     position: absolute;
@@ -97,6 +105,10 @@ let currentPath = useRoute();
 
     @media (min-width: 710px) {
       width: 12%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 3%;
     }
   }
 }

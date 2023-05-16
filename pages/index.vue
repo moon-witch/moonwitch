@@ -365,6 +365,10 @@ function animatePaths(): void {
     padding: 3rem 1rem 3rem 1rem;
     height: 70vh;
   }
+
+  @media (min-width: 1024px) {
+    height: 60vh;
+  }
 }
 
 .sol {
@@ -374,6 +378,10 @@ function animatePaths(): void {
 
   @media (min-width: 710px) {
     width: 50rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 40rem;
   }
 }
 

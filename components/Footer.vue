@@ -3,13 +3,13 @@
     <div class="container">
       <span class="link-text">built with:</span>
       <a
-        id="vue"
+        id="nuxt"
         class="link-logo"
-        href="https://vuejs.org"
+        href="https://nuxt.com"
         target="_blank"
         rel="noopener"
       >
-        <img id="vue" src="/vueLogo.svg" alt="vue" />
+        <img id="nuxt" src="/icon-black.svg" alt="nuxt" />
       </a>
       <a
         class="link-logo"
@@ -70,7 +70,7 @@
   }
 }
 
-#vue {
+#nuxt {
   width: 2rem;
 }
 

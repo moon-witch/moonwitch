@@ -9,7 +9,7 @@
       </div>
       <div id="infoContainer">
         <div id="text1">
-          this portfolio. 100% built with pure scss, gsap and vue.
+          this portfolio. 100% built with pure scss, gsap and nuxt.
         </div>
         <div id="text2">
           simple design. purposeful animations. geometrical shapes.
@@ -24,7 +24,7 @@
           </div>
           <div id="code">
             <a
-              href="https://github.com/moon-witch/TheMoon"
+              href="https://github.com/moon-witch/moonwitch"
               target="_blank"
               alt="portfolio git repo"
               rel="noopener"
