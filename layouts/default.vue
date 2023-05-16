@@ -1,0 +1,103 @@
+<script setup lang="ts">
+let currentPath = useRoute();
+</script>
+
+<template>
+  <div id="viewport">
+    <Nav />
+    <div id="moonwitch-container">
+      <div id="logo-container">
+        <img
+          v-if="currentPath.path === '/'"
+          id="moonwitch-logo"
+          src="/moonwitch2.png"
+          alt="logo of moonwitch"
+        />
+        <div v-else id="smallLogoContainer">
+          <img
+            id="moonwitch-logo-sm"
+            src="/moonwitch2.png"
+            alt="logo of moonwitch"
+          />
+        </div>
+      </div>
+      <div v-if="currentPath.path === '/'" id="moonwitch-name" class="font-alt">
+        moonwitch
+        <div id="tagline">creative web developer</div>
+      </div>
+    </div>
+    <slot />
+
+    <Footer />
+  </div>
+</template>
+
+<style scoped lang="scss">
+#viewport {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: $bg-dark;
+  overflow-x: hidden;
+}
+
+#moonwitch-container {
+  width: 100%;
+}
+
+#moonwitch-name {
+  text-align: center;
+  color: $bg-dark;
+  padding: $spacing-sm;
+  margin-top: 1rem;
+  font-size: $text-lg;
+  font-family: "Sono";
+  background: $primary;
+}
+
+#tagline {
+  font-size: $text-sm;
+  color: $bg-dark;
+  line-height: 30px;
+  margin: 9px 0 0 0;
+}
+
+#logo-container {
+  background: $primary;
+}
+
+#moonwitch-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+
+  @media (min-width: 710px) {
+    width: 20%;
+  }
+}
+
+#smallLogoContainer {
+  position: fixed;
+  background: $bg-bright;
+  width: 100vw;
+  height: 95px;
+  z-index: 5;
+  box-shadow: 0 0 3px 3px $bg-dark;
+
+  #moonwitch-logo-sm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+    width: 23%;
+
+    @media (min-width: 710px) {
+      width: 12%;
+    }
+  }
+}
+</style>

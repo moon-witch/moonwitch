@@ -1,0 +1,46 @@
+$primary: #B4C292;
+$secondary: #736F4E;
+
+$bg-bright: #B4C292;
+$bg-dark: #393530;
+
+$btn-bright: $bg-dark;
+$btn-dark: $bg-bright;
+$btn-rounded: 26px;
+$btn-vert: 9px;
+$btn-horiz: 18px;
+$btn-line-h: 100%;
+$btn-letter-space: 2%;
+
+$border-bright: $primary;
+$border-dark: $secondary;
+
+$letter-space-xl: 0%;
+$letter-space-lg: 1%;
+$letter-space-md: 2%;
+$letter-space-sm: 3%;
+
+$spacing-xl: 36px;
+$spacing-lg: 27px;
+$spacing-md: 18px;
+$spacing-sm: 9px;
+
+$line-h-lg: 45px;
+$line-h-md: 36px;
+$line-h-sm: 27px;
+
+$shadow-lg-y: 9px;
+$shadow-blur-lg-y: calc($shadow-lg-y * 2);
+$shadow-md-y: 6px;
+$shadow-blur-md-y: calc($shadow-md-y * 2);
+$shadow-sm-y: 3px;
+$shadow-blur-sm-y: calc($shadow-sm-y * 2);
+
+$padding-sm: 45px;
+$padding-md: 70px;
+$padding-lg: 90px;
+
+$text-sm: 19px;
+$text-md: 23px;
+$text-lg: 27px;
+
