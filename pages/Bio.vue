@@ -30,43 +30,42 @@
           ...and anything else you'd like to see as a website.
         </li>
       </ul>
-      <div id="contact">Contact me</div>
+      <div id="contact"><NuxtLink to="/contact">contact me</NuxtLink></div>
     </div>
 
-    <div id="interestContainer">
-      <div id="interestsHead">Personally, I am very interested in</div>
-      <ul>
-        <li>responsible use of technology</li>
-        <li>because the more we create, the more we have to understand</li>
-        <li>freedom of speech</li>
-        <li>
-          because every voice must be heard, so all beings can coexist
-          peacefully
-        </li>
-        <li>climate activism</li>
-        <li>
-          because mother nature has suffered enough and the least we can do is
-          help her to recover
-        </li>
-      </ul>
-    </div>
+    <div id="interestTopic">
+      <div id="interestContainer">
+        <div id="interestsHead">Personally, I am very interested in</div>
+        <ul>
+          <li>responsible use of technology</li>
+          <li>because the more we create, the more we have to understand</li>
+          <li>freedom of speech</li>
+          <li>
+            because every voice must be heard, so all beings can coexist
+            peacefully
+          </li>
+          <li>climate activism</li>
+          <li>
+            because mother nature has suffered enough and the least we can do is
+            help her to recover
+          </li>
+        </ul>
+      </div>
 
-    <div id="topicsContainer">
-      <div id="topicsHead">My favorite topics to chat about are</div>
-      <ul>
-        <li>
-          artifical intelligence <img src="/pentagram.png" />
-        </li>
-        <li><img src="/sol.svg" />consciousness</li>
-        <li>spirituality<img src="/fibonacci.png" /></li>
-      </ul>
+      <div id="topicsContainer">
+        <div id="topicsHead">My favorite topics to chat about are</div>
+        <ul>
+          <li>artifical intelligence <img src="/pentagram.png" /></li>
+          <li><img src="/sol.svg" />consciousness</li>
+          <li>spirituality<img src="/fibonacci.png" /></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 #bioContainer {
-  display: absolute;
   margin: 7rem 0.5rem 5rem 0.5rem;
   padding: 1rem;
 
@@ -88,6 +87,11 @@
     padding: 0 5rem 0 5rem;
   }
 
+  @media (min-width: 1024px) {
+    padding: 0 38rem;
+    margin: 3rem 0 0 0;
+  }
+
   #imageOfMe {
     height: 8rem;
     border-radius: 100px;
@@ -106,7 +110,7 @@
     height: 75px;
     background: $primary;
     top: 27%;
-    left:-4%;
+    left: -4%;
     z-index: 1;
 
     @media (min-height: 400px) {
@@ -117,6 +121,13 @@
       width: 100vw;
       left: -11%;
     }
+
+    @media (min-width: 1024px) {
+      width: 60vw;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
   }
 }
 
@@ -124,6 +135,11 @@
   margin-top: 1rem;
   background: $secondary;
   padding: 1rem 0 1rem 0;
+
+  @media (min-width: 1024px) {
+    padding: 1rem 5rem;
+    margin: 5rem 11rem;
+  }
 
   #slogan1 {
     margin-left: 1rem;
@@ -147,6 +163,11 @@
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
 
+  @media (min-width: 1024px) {
+    padding: 1rem 5rem;
+    margin: 5rem 22rem;
+  }
+
   #skillsHead {
     font-size: 1.2rem;
     text-align: center;
@@ -167,19 +188,55 @@
       border-radius: 50px;
       width: 100%;
       padding: 0.5rem 2rem 0.5rem 2rem;
+
+      @media (min-width: 1024px) {
+        margin: 0.5rem 0 0.5rem 22rem;
+      }
     }
 
     li:nth-of-type(even):not(.long) {
       margin-left: 3rem;
       width: 100%;
+
+      @media (min-width: 1024px) {
+        margin: 0.5rem 0 0.5rem 11rem;
+      }
+    }
+
+    .long {
+      text-align: center;
     }
   }
 
   #contact {
+    transition: 0.2s ease;
     text-align: center;
     font-size: 1.1rem;
     background: $primary;
     padding: 0.2rem 0 0.2rem 0;
+
+    a {
+      text-decoration: none;
+      color: $bg-dark;
+
+      &:hover {
+        cursor: crosshair;
+      }
+    }
+
+    &:hover {
+      transition: 0.2s ease;
+      letter-spacing: 0.1rem;
+      cursor: crosshair;
+    }
+  }
+}
+
+#interestTopic {
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
   }
 }
 
@@ -187,6 +244,11 @@
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
+
+  @media (min-width: 1024px) {
+    padding: 1rem 5rem;
+    width: 30vw;
+  }
 
   #interestsHead {
     font-size: 1.2rem;
@@ -217,6 +279,11 @@
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
 
+  @media (min-width: 1024px) {
+    padding: 1rem 5rem;
+    width: 30vw;
+  }
+
   #topicsHead {
     font-size: 1.2rem;
     margin: 0 1rem 0 1rem;
@@ -225,6 +292,10 @@
 
   ul {
     list-style: none;
+
+    @media (min-width: 1024px) {
+      margin: 4rem 0 0 0;
+    }
 
     li {
       display: flex;

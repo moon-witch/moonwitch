@@ -35,10 +35,9 @@ let currentPath = useRoute();
 <style scoped lang="scss">
 #viewport {
   position: absolute;
-  height: 100vh;
   width: 100vw;
+  min-height: 100vh;
   background: $bg-dark;
-  overflow-x: hidden;
 }
 
 #moonwitch-container {
@@ -108,7 +107,7 @@ let currentPath = useRoute();
     }
 
     @media (min-width: 1024px) {
-      width: 3%;
+      width: 60px;
     }
   }
 }

@@ -225,7 +225,9 @@ router.afterEach(() => {
 }
 
 #desktopNavContainer {
-  position: absolute;
+  position: fixed;
+  z-index: 5;
+  box-shadow: 0 0 9px 3px $bg-dark;
 
   ul {
     li {
@@ -270,6 +272,7 @@ router.afterEach(() => {
   #notHomePageNav {
     margin: 60px 0 0 0;
     width: 100vw;
+    background: $bg-dark;
     ul {
       display: flex;
       justify-content: space-between;
