@@ -107,7 +107,7 @@ const tools = {
 
 <style scoped lang="scss">
 .container {
-  @media (min-width: 1024px) {
+  @media (min-width: 740px) {
     display: flex;
     justify-content: space-between;
   }
@@ -136,7 +136,10 @@ const tools = {
     background: $secondary;
     margin: 2rem 1rem 0 1rem;
     padding: 1rem;
-    width: 30vw;
+
+    @media (min-width: 740px) {
+      width: 30vw;
+    }
 
     .toolTitle {
       text-align: center;

@@ -10,6 +10,26 @@ const projects = [
     code: "https://github.com/moon-witch/moonwitch",
     codeAlt: "portfolio git repo",
   },
+  {
+    name: "portfolio",
+    img: "/moonwitch2.png",
+    alt: "this portfolio",
+    text1: "this portfolio. 100% built with pure scss, gsap and nuxt.",
+    text2: "simple design. purposeful animations. geometrical shapes.",
+    tools: ["vue", "gsap", "scss"],
+    code: "https://github.com/moon-witch/moonwitch",
+    codeAlt: "portfolio git repo",
+  },
+  {
+    name: "portfolio",
+    img: "/moonwitch2.png",
+    alt: "this portfolio",
+    text1: "this portfolio. 100% built with pure scss, gsap and nuxt.",
+    text2: "simple design. purposeful animations. geometrical shapes.",
+    tools: ["vue", "gsap", "scss"],
+    code: "https://github.com/moon-witch/moonwitch",
+    codeAlt: "portfolio git repo",
+  },
 ];
 </script>
 
@@ -53,11 +73,11 @@ const projects = [
 <style scoped lang="scss">
 #container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 7rem 0;
+  margin: 11rem 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1300px) {
     margin: 11rem 0 6rem 0;
     padding: 0 11rem;
   }
@@ -69,7 +89,11 @@ const projects = [
   position: relative;
   border: 3px dashed $secondary;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 740px) {
+    width: 80vw;
+  }
+
+  @media (min-width: 1300px) {
     width: 30vw;
     margin: 2rem 3rem;
   }
@@ -104,7 +128,7 @@ const projects = [
     #text1 {
       margin: 0 0 0 0.5rem;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1300px) {
         margin: 0.5rem 0 -1rem 2rem;
       }
     }
@@ -113,7 +137,7 @@ const projects = [
       text-align: end;
       margin: 0 0 1rem 0;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1300px) {
         margin: 0.5rem 1rem 1rem 0;
       }
     }

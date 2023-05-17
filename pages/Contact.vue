@@ -7,6 +7,7 @@ const loading = ref(false);
 const form = ref({
   name: "",
   mail: "",
+  subject: "",
   message: "",
 });
 
@@ -63,6 +64,17 @@ async function submit(form: Object) {
           required
         />
         <label for="contactMail">mail</label>
+      </div>
+
+      <div id="subjectContainer">
+        <input
+          id="contactSubject"
+          v-model="form.subject"
+          name="contactSubject"
+          type="text"
+          required
+        />
+        <label for="contactSubject">subject</label>
       </div>
 
       <div id="messageContainer">
@@ -127,7 +139,7 @@ async function submit(form: Object) {
       padding: 1rem 0 1rem 9rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
       margin: 3rem 44rem;
       padding: 1rem 3rem;
     }
@@ -146,7 +158,7 @@ async function submit(form: Object) {
     font-size: 1.1rem;
     background: $secondary;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
       margin: 3rem 33rem;
     }
 
@@ -212,6 +224,37 @@ async function submit(form: Object) {
       }
     }
 
+    #subjectContainer {
+      margin: 2rem 0 2rem 0;
+      position: relative;
+
+      input {
+        padding: 0.2rem;
+        border: none;
+        background: $bg-dark;
+        font-family: "Sono";
+        font-size: 1.1rem;
+
+        @media (min-width: 710px) {
+          width: 30rem;
+        }
+      }
+
+      label {
+        position: absolute;
+        left: 23%;
+        top: -1.5rem;
+      }
+
+      input:focus {
+        background: $primary;
+      }
+
+      input:valid + label {
+        color: $primary;
+      }
+    }
+
     #messageContainer {
       margin: 4rem 0 2rem 0;
       position: relative;
@@ -230,7 +273,7 @@ async function submit(form: Object) {
           width: 35rem;
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1300px) {
           width: 40rem;
         }
       }

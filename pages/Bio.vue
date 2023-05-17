@@ -68,6 +68,7 @@
 #bioContainer {
   margin: 7rem 0.5rem 5rem 0.5rem;
   padding: 1rem;
+  overflow-x: hidden;
 
   @media (min-width: 710px) {
     margin: 7rem 3rem 5rem 3rem;
@@ -87,7 +88,7 @@
     padding: 0 5rem 0 5rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1300px) {
     padding: 0 38rem;
     margin: 3rem 0 0 0;
   }
@@ -99,7 +100,7 @@
     z-index: 2;
     box-shadow: 0 0 6px 6px $bg-dark;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
       height: 11rem;
     }
   }
@@ -108,7 +109,7 @@
     font-size: 1.5rem;
     z-index: 2;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
       font-size: 2rem;
     }
   }
@@ -130,7 +131,7 @@
       left: -11%;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
       width: 60vw;
       left: 0;
       right: 0;
@@ -145,7 +146,7 @@
   background: $secondary;
   padding: 1rem 0 1rem 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1300px) {
     padding: 1rem;
     margin: 5rem 22rem;
   }
@@ -172,7 +173,7 @@
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1300px) {
     padding: 1rem 5rem;
     margin: 5rem 22rem;
   }
@@ -198,7 +199,11 @@
       width: 100%;
       padding: 0.5rem 2rem 0.5rem 2rem;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 740px) {
+        margin: 0.5rem 0 0.5rem 16rem;
+      }
+
+      @media (min-width: 1300px) {
         margin: 0.5rem 0 0.5rem 22rem;
       }
     }
@@ -207,7 +212,11 @@
       margin-left: 3rem;
       width: 100%;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 740px) {
+        margin: 0.5rem 0 0.5rem 8rem;
+      }
+
+      @media (min-width: 1300px) {
         margin: 0.5rem 0 0.5rem 11rem;
       }
     }

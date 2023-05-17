@@ -243,10 +243,10 @@ router.afterEach(() => {
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       margin: 40vh 0 0 0;
       li {
-        padding: 5rem 5rem 5rem 5rem;
+        padding: 5rem 5rem;
         text-align: center;
         width: 30vw;
         font-family: "Splash", cursive;
@@ -258,11 +258,19 @@ router.afterEach(() => {
           cursor: crosshair;
 
           &.bio {
-            margin-right: 7rem;
+            margin-right: 17rem;
+
+            @media (min-width: 1300px) {
+              margin-right: 7rem;
+            }
           }
 
           &.projects {
             padding-left: 7rem;
+
+            @media (min-width: 1300px) {
+              padding-left: 7rem;
+            }
           }
 
           &:hover {
@@ -279,11 +287,15 @@ router.afterEach(() => {
     background: $bg-dark;
     ul {
       display: flex;
-      justify-content: space-between;
-      margin: 0 3rem;
+      justify-content: space-evenly;
+      margin: 0 1rem;
       li {
-        margin: 1rem 3rem;
+        margin: 1rem 1rem;
         font-family: "Splash", cursive;
+
+        @media(min-width: 1300px) {
+          margin: 1rem 3rem;
+        }
         a {
           padding: 0.5rem 1rem;
           color: $primary;
