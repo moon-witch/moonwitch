@@ -3,6 +3,7 @@
 ## feel free to look around.
 
 ### if you wanna copy parts of my portfolio, feel free to use & reuse!
+#### just make sure to credit me!
 
 ### everything is built with pure scss. svg animation is done with gsap. static site generation is achieved with nuxt using vue templating.
 
