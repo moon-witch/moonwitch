@@ -55,7 +55,7 @@ function animatePaths(): void {
         rotate: -360,
         repeat: -1,
         duration: 22,
-        ease: "power2.inOut"
+        ease: "sine.inOut"
     })
   }
 </script>
