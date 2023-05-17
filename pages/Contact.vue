@@ -32,11 +32,7 @@ async function submit(form: Object) {
         href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
         target="_blank"
         rel="noopener"
-        ><img
-          id="linkedin"
-          src="/In-White-26.png"
-          alt="linkedin"
-        />
+        ><img id="linkedin" src="/In-White-26.png" alt="linkedin" />
       </a>
       <div id="mail">joshua_develops@proton.me</div>
     </div>
@@ -109,6 +105,7 @@ async function submit(form: Object) {
   #mainText {
     text-align: center;
     margin: 2rem 0 0 0;
+    user-select: none;
 
     @media (min-width: 710px) {
       margin: 5rem 0 0 0;
@@ -129,6 +126,7 @@ async function submit(form: Object) {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    cursor: crosshair;
 
     @media (min-width: 710px) {
       margin: 3rem 0 9rem 0;
@@ -143,12 +141,26 @@ async function submit(form: Object) {
       margin: 3rem 44rem;
       padding: 1rem 3rem;
     }
+
+    a {
+      cursor: crosshair;
+      width: fit-content;
+
+      &:hover {
+        cursor: crosshair;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
   #subText {
     margin: 2rem 1rem 0 1rem;
     font-size: 1.2rem;
     text-align: center;
+    user-select: none;
   }
 
   form {
@@ -157,6 +169,7 @@ async function submit(form: Object) {
     padding: 0.5rem 0 0.5rem 0;
     font-size: 1.1rem;
     background: $secondary;
+    user-select: none;
 
     @media (min-width: 1300px) {
       margin: 3rem 33rem;

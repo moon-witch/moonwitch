@@ -115,6 +115,11 @@ const tools = {
 
 #mainContainer {
   margin: 7rem 0 4rem 0;
+  user-select: none;
+
+  @media (min-width: 1300px) {
+    margin: 7rem 11rem;
+  }
 
   #title {
     text-align: center;
@@ -148,6 +153,10 @@ const tools = {
 
       a {
         color: $bg-dark;
+
+        &:hover {
+          cursor: crosshair;
+        }
       }
     }
 

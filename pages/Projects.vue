@@ -76,6 +76,7 @@ const projects = [
   justify-content: center;
   flex-wrap: wrap;
   margin: 11rem 0;
+  user-select: none;
 
   @media (min-width: 1300px) {
     margin: 11rem 0 6rem 0;
@@ -173,6 +174,10 @@ const projects = [
 
         a {
           color: $bg-dark;
+
+          &:hover {
+            cursor: crosshair;
+          }
         }
       }
     }

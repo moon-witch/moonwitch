@@ -69,6 +69,7 @@
   margin: 7rem 0.5rem 5rem 0.5rem;
   padding: 1rem;
   overflow-x: hidden;
+  user-select: none;
 
   @media (min-width: 710px) {
     margin: 7rem 3rem 5rem 3rem;

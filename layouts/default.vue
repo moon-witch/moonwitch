@@ -27,7 +27,7 @@ let currentPath = useRoute();
       </div>
     </div>
     <slot />
-
+    <MoonwitchGlitch v-if="currentPath.path != '/'"/>
     <Footer />
   </div>
 </template>
