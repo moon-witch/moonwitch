@@ -21,10 +21,10 @@ let currentPath = useRoute();
           />
         </div>
       </div>
-      <div v-if="currentPath.path === '/'" id="moonwitch-name" class="font-alt">
+      <h1 v-if="currentPath.path === '/'" id="moonwitch-name" class="font-alt">
         moonwitch
         <div id="tagline">creative web developer</div>
-      </div>
+      </h1>
     </div>
     <slot />
     <MoonwitchGlitch v-if="currentPath.path != '/'"/>
@@ -51,6 +51,7 @@ let currentPath = useRoute();
   margin-top: 1rem;
   font-size: $text-lg;
   font-family: "Sono";
+  font-weight: 400;
   background: $primary;
 
   @media (min-width: 1300px) {

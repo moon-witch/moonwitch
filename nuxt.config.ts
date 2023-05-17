@@ -15,9 +15,29 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Mynerve&family=Sono:wght@200;300;400;500;600;700;800&family=Splash&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400&family=Splash&display=swap",
         },
       ],
+      meta: [
+        {
+          name: "description",
+          content:
+            "check out the projects and favorite tools of the web developer called moonwitch!",
+        },
+        { property: "og:title", content: "moonwitch portfolio" },
+        {
+          property: "og:description",
+          content:
+            "check out the projects and favorite tools of the web developer called moonwitch!",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://moonwitch.art" },
+        { property: "og:locale", content: "en_US" },
+        { property: "og:image", content: "https://moonwitch.art/moonwitch2.png" },
+      ],
+      htmlAttrs: {
+        lang: "en",
+      },
     },
   },
   build: {

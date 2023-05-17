@@ -22,10 +22,6 @@ html, body {
   overflow-x: hidden;
 }
 
-.font-alt {
-  font-family: "Mynerve", cursive;
-}
-
 .font-splash {
   font-family: "Splash", cursive;
 }

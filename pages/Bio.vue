@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  link: [{ rel: "canonical", href: "https://moonwitch.art/" }],
+});
+</script>
 
 <template>
   <div id="bioContainer">
@@ -15,7 +19,7 @@
       <div id="slogan2">
         Every project is unique, every element placed with purpose.
       </div>
-      <div id="slogan3">Consciously designed to bring joy.</div>
+      <h1 id="slogan3">Consciously designed to bring joy.</h1>
     </div>
 
     <div id="skillContainer">
@@ -55,9 +59,9 @@
       <div id="topicsContainer">
         <div id="topicsHead">My favorite topics to chat about are</div>
         <ul>
-          <li>artifical intelligence <img src="/pentagram.png" /></li>
-          <li><img src="/sol.svg" />consciousness</li>
-          <li>spirituality<img src="/fibonacci.png" /></li>
+          <li>artifical intelligence <img src="/pentagram.png" alt="image depicting the interconnectedness of neurons" /></li>
+          <li><img src="/sol.svg" alt="stylized image of a beautiful sun"/>consciousness</li>
+          <li>spirituality<img src="/fibonacci.png" alt="stylized image of the fibonacci sequence"/></li>
         </ul>
       </div>
     </div>
@@ -166,6 +170,7 @@
   #slogan3 {
     text-align: center;
     font-size: 1.2rem;
+    font-weight: 400;
   }
 }
 

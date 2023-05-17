@@ -23,6 +23,7 @@ router.afterEach(() => {
         src="/triangle.png"
         :class="{ rotated: isExpanded }"
         id="toggle-img"
+        alt="nav toggle"
       />
     </div>
     <div id="overlay" :class="{ exists: isExpanded }" @click="toggleNav" />
@@ -262,6 +263,16 @@ router.afterEach(() => {
 
             @media (min-width: 1300px) {
               margin-right: 7rem;
+              margin-left: -30rem;
+            }
+          }
+
+          &.tools {
+            margin-right: 17rem;
+
+            @media (min-width: 1300px) {
+              margin-right: 7rem;
+              margin-left: -11rem;
             }
           }
 
@@ -270,6 +281,16 @@ router.afterEach(() => {
 
             @media (min-width: 1300px) {
               padding-left: 7rem;
+              margin-right: -22rem;
+            }
+          }
+
+          &.contact {
+            padding-left: 7rem;
+
+            @media (min-width: 1300px) {
+              padding-left: 7rem;
+              margin-right: -7rem;
             }
           }
 

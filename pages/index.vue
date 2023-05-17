@@ -1,63 +1,67 @@
 <script setup lang="ts">
-import gsap from 'gsap';
-import { onMounted, ref } from 'vue';
+import gsap from "gsap";
+import { onMounted, ref } from "vue";
+
+useHead({
+  link: [{ rel: "canonical", href: "https://moonwitch.art/" }],
+});
 
 const sol = ref<SVGSVGElement | null>(null);
 
 onMounted(() => {
-    animatePaths();
-})
+  animatePaths();
+});
 
 function animatePaths(): void {
-    const paths = sol.value?.querySelectorAll('path');
-    const solar = sol.value;
+  const paths = sol.value?.querySelectorAll("path");
+  const solar = sol.value;
 
-    if (paths) {
-      gsap.set(paths, { strokeDasharray: 2000 });
+  if (paths) {
+    gsap.set(paths, { strokeDasharray: 2000 });
 
-      paths.forEach((path: SVGPathElement, index: number) => {
-        if (index % 2 === 0) {
-          gsap.to(path, {
-            strokeDasharray: (path.getTotalLength() / 2),
-            strokeDashoffset: (path.getTotalLength() / 2),
-            stagger: {
-                each: 0.1,
-                from: "center",
-                grid: "auto",
-                ease: "power2.inOut"
-            },
-            duration: 11,
-            ease: 'power1.out',
-            yoyo: true,
-            repeat: -1,
-            repeatDelay: 0.5,
-          });
-        } else {
-            gsap.to(path, {
-            strokeDasharray: path.getTotalLength(),
-            strokeDashoffset: path.getTotalLength(),
-            stagger: {
-                each: 0.1,
-                from: "center",
-                grid: "auto",
-                ease: "power2.inOut"
-            },
-            duration: 11,
-            ease: 'power1.out',
-            yoyo: true,
-            repeat: -1,
-          });
-        }
-      });
-    }
-
-    gsap.to(solar, {
-        rotate: -360,
-        repeat: -1,
-        duration: 22,
-        ease: "sine.inOut"
-    })
+    paths.forEach((path: SVGPathElement, index: number) => {
+      if (index % 2 === 0) {
+        gsap.to(path, {
+          strokeDasharray: path.getTotalLength() / 2,
+          strokeDashoffset: path.getTotalLength() / 2,
+          stagger: {
+            each: 0.1,
+            from: "center",
+            grid: "auto",
+            ease: "power2.inOut",
+          },
+          duration: 11,
+          ease: "power1.out",
+          yoyo: true,
+          repeat: -1,
+          repeatDelay: 0.5,
+        });
+      } else {
+        gsap.to(path, {
+          strokeDasharray: path.getTotalLength(),
+          strokeDashoffset: path.getTotalLength(),
+          stagger: {
+            each: 0.1,
+            from: "center",
+            grid: "auto",
+            ease: "power2.inOut",
+          },
+          duration: 11,
+          ease: "power1.out",
+          yoyo: true,
+          repeat: -1,
+        });
+      }
+    });
   }
+
+  gsap.to(solar, {
+    rotate: -360,
+    repeat: -1,
+    duration: 22,
+    ease: "sine.inOut",
+  });
+}
 </script>
 
 <template>

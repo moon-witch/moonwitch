@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useHead({
+  link: [{ rel: "canonical", href: "https://moonwitch.art/" }],
+});
+
 const tools = {
   frameworks: [
     {
