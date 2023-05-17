@@ -52,6 +52,10 @@ let currentPath = useRoute();
   font-size: $text-lg;
   font-family: "Sono";
   background: $primary;
+
+  @media (min-width: 1300px) {
+    font-size: 2.5rem;
+  }
 }
 
 #tagline {
@@ -59,6 +63,10 @@ let currentPath = useRoute();
   color: $bg-dark;
   line-height: 30px;
   margin: 9px 0 0 0;
+
+  @media (min-width: 1300px) {
+    font-size: 1.5rem;
+  }
 }
 
 #logo-container {
