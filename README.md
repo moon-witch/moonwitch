@@ -1,42 +1,9 @@
-# Nuxt 3 Minimal Starter
+# portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## feel free to look around the code.
 
-## Setup
+### if you wanna copy parts of my portfolio, feel free to use & reuse!
 
-Make sure to install the dependencies:
+### everything is built with pure scss. svg animation is done with gsap. static site generation is achieved with nuxt using vue templates.
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+#### if you wanna start a local copy of this animation, clone the repository, run *npm install* in the root directory of the project and after run *npm run dev* to start the development server.
