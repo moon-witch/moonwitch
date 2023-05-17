@@ -39,7 +39,14 @@ async function submit(form: Object) {
     <div id="subText">
       alternatively you can use the form below to send me a mail.
     </div>
-    <form @submit.prevent="submit(form)">
+    <form
+      action="https://formkeep.com/f/69547b38c738"
+      accept-charset="UTF-8"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      <input type="hidden" name="utf8" value="✓" />
+
       <div id="nameContainer">
         <input
           id="contactName"
@@ -83,10 +90,12 @@ async function submit(form: Object) {
         />
         <label for="contactMessage">your message</label>
       </div>
-      <div v-if="error" class="feedback"></div>
-      <div v-if="success" class="feedback"></div>
+      <div v-if="error" class="feedback">
+        XXX error while sending message. please try again XXX
+      </div>
+      <div v-if="success" class="feedback">message sent!</div>
       <button type="submit" id="submit">
-        <template v-if="loading"></template>
+        <template v-if="loading">sending...</template>
         <template v-if="!loading">submit</template>
       </button>
     </form>
