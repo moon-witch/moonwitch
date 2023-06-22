@@ -93,12 +93,12 @@ async function submit(form: Object) {
     }
 
     @media (min-width: 1300px) {
-      margin: 3rem 4rem;
+      margin: 3rem 40rem;
       padding: 1rem 3rem;
     }
 
     @media (min-width: 2000px) {
-      margin: 3rem 40rem;
+      margin: 3rem 60rem;
     }
     @media (min-width: 3000px) {
       margin: 3rem 80rem;
