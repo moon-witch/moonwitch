@@ -14,11 +14,13 @@ let currentPath = useRoute();
           alt="logo of moonwitch"
         />
         <div v-else id="smallLogoContainer">
-          <img
+          <NuxtLink to="/">
+            <img
             id="moonwitch-logo-sm"
             src="/moonwitch2.png"
             alt="logo of moonwitch"
           />
+          </NuxtLink>
         </div>
       </div>
       <h1 v-if="currentPath.path === '/'" id="moonwitch-name" class="font-alt">

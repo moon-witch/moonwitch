@@ -69,9 +69,8 @@ const tools = {
 
 <template>
   <div id="mainContainer">
-    <div id="title">tools</div>
 
-    <div class="subHeader">frameworks</div>
+    <div id="first" class="subHeader">frameworks</div>
     <div class="container">
       <div v-for="tool in tools.frameworks" class="toolContainer">
         <div class="toolTitle">
@@ -125,9 +124,8 @@ const tools = {
     margin: 7rem 11rem;
   }
 
-  #title {
-    text-align: center;
-    font-size: 1.5rem;
+  #first {
+    margin-top: 12rem;
   }
 
   .subHeader {
@@ -157,10 +155,6 @@ const tools = {
 
       a {
         color: $bg-dark;
-
-        &:hover {
-          cursor: crosshair;
-        }
       }
     }
 

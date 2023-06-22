@@ -20,6 +20,7 @@ html, body {
   padding: 0;
   font-family: "Sono", sans-serif;
   overflow-x: hidden;
+  max-width: 1920px;
 }
 
 .font-splash {

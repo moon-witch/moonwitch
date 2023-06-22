@@ -14,6 +14,7 @@
   right: 2rem;
   height: 3rem;
   width: 7rem;
+  border-radius: 30px;
   background: $bg-dark;
   user-select: none;
 
@@ -40,7 +41,7 @@
 #name {
   position: relative;
   top: 27%;
-  left: 3%;
+  left: 6%;
   font-size: 1rem;
   color: $secondary;
   animation: glitch 1s infinite linear alternate-reverse;

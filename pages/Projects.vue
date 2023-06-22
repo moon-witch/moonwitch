@@ -128,10 +128,13 @@ const projects = [
     #name {
       text-align: center;
       margin: 1rem 0 -1rem 0;
+      color: $secondary;
+      font-size: 1.2rem;
     }
 
     #text1 {
       margin: 0 0 0 0.5rem;
+      color: $secondary;
 
       @media (min-width: 1300px) {
         margin: 0.5rem 0 -1rem 2rem;
@@ -141,6 +144,7 @@ const projects = [
     #text2 {
       text-align: end;
       margin: 0 0 1rem 0;
+      color: $secondary;
 
       @media (min-width: 1300px) {
         margin: 0.5rem 1rem 1rem 0;
@@ -178,10 +182,6 @@ const projects = [
 
         a {
           color: $bg-dark;
-
-          &:hover {
-            cursor: crosshair;
-          }
         }
       }
     }

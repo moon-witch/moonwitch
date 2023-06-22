@@ -98,6 +98,11 @@ useHead({
     margin: 3rem 0 0 0;
   }
 
+  @media (min-width: 3000px) {
+    padding: 0 68rem;
+    margin: 3rem 0 0 0;
+  }
+
   #imageOfMe {
     height: 8rem;
     border-radius: 100px;
@@ -236,22 +241,17 @@ useHead({
     transition: 0.2s ease;
     text-align: center;
     font-size: 1.1rem;
-    background: $primary;
+    background: $bg-dark;
     padding: 0.2rem 0 0.2rem 0;
 
     a {
       text-decoration: none;
-      color: $bg-dark;
-
-      &:hover {
-        cursor: crosshair;
-      }
+      color: $secondary;
     }
 
     &:hover {
       transition: 0.2s ease;
       letter-spacing: 0.1rem;
-      cursor: crosshair;
     }
   }
 }
@@ -324,10 +324,9 @@ useHead({
     li {
       display: flex;
       justify-content: center;
-      font-size: 1rem;
+      font-size: 1.5rem;
       text-align: center;
-      margin-left: -2rem;
-      line-height: 4rem;
+      line-height: 5rem;
 
       img {
         width: 3rem;

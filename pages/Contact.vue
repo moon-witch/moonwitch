@@ -23,7 +23,7 @@ async function submit(form: Object) {
 <template>
   <div id="mainContainer">
     <div id="mainText">
-      <div>you can contact me through LinkedIn or just drop me a mail.</div>
+      <div id="first">you can contact me through LinkedIn or just drop me a mail.</div>
       <div>
         make sure to include as much info as possible about your desired
         project.
@@ -56,6 +56,12 @@ async function submit(form: Object) {
     text-align: center;
     margin: 2rem 0 0 0;
     user-select: none;
+    color: $secondary;
+
+    #first {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
 
     @media (min-width: 710px) {
       margin: 5rem 0 0 0;
@@ -76,7 +82,6 @@ async function submit(form: Object) {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    cursor: crosshair;
 
     @media (min-width: 710px) {
       margin: 3rem 0 9rem 0;
@@ -88,17 +93,20 @@ async function submit(form: Object) {
     }
 
     @media (min-width: 1300px) {
-      margin: 3rem 44rem;
+      margin: 3rem 4rem;
       padding: 1rem 3rem;
     }
 
-    a {
-      cursor: crosshair;
-      width: fit-content;
+    @media (min-width: 2000px) {
+      margin: 3rem 40rem;
+    }
+    @media (min-width: 3000px) {
+      margin: 3rem 80rem;
+    }
 
-      &:hover {
-        cursor: crosshair;
-      }
+    a {
+      width: fit-content;
+      filter: invert(29%) sepia(0%) saturate(6133%) hue-rotate(343deg) brightness(34%) contrast(90%);
 
       img:hover {
         transform: scale(1.1);

@@ -30,7 +30,7 @@ router.afterEach(() => {
     <div :class="{ expanded: isExpanded }" class="container">
       <ul>
         <li><NuxtLink class="link" to="/">landing</NuxtLink></li>
-        <li><NuxtLink class="link" to="/bio">bio</NuxtLink></li>
+        <li><NuxtLink class="link" to="/bio">profile</NuxtLink></li>
         <li><NuxtLink class="link" to="/projects">projects</NuxtLink></li>
         <li><NuxtLink class="link" to="/tools">tools</NuxtLink></li>
         <li><NuxtLink class="link" to="/contact">contact</NuxtLink></li>
@@ -46,7 +46,7 @@ router.afterEach(() => {
   <div id="desktopNavContainer">
     <div v-if="path.path === '/'" id="homePageNav">
       <ul>
-        <li><NuxtLink class="link bio" to="/bio">bio</NuxtLink></li>
+        <li><NuxtLink class="link bio" to="/bio">profile</NuxtLink></li>
         <li>
           <NuxtLink class="link projects" to="/projects">projects</NuxtLink>
         </li>
@@ -57,7 +57,7 @@ router.afterEach(() => {
     <div v-else id="notHomePageNav">
       <ul>
         <li><NuxtLink class="link landing center" to="/">landing</NuxtLink></li>
-        <li><NuxtLink class="link bio center" to="/bio">bio</NuxtLink></li>
+        <li><NuxtLink class="link bio center" to="/bio">profile</NuxtLink></li>
         <li>
           <NuxtLink class="link projects center" to="/projects"
             >projects</NuxtLink
@@ -80,7 +80,7 @@ router.afterEach(() => {
 }
 
 #mobileNavContainer {
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (min-height: 768px) {
     display: none;
   }
 
@@ -231,6 +231,10 @@ router.afterEach(() => {
   box-shadow: 0 0 9px 3px $bg-dark;
 
   @media (max-width: 1023px) {
+      display: none;
+  }
+
+  @media (max-height: 767px) {
     display: none;
   }
 
@@ -255,8 +259,12 @@ router.afterEach(() => {
           color: $primary;
           text-decoration: none;
           text-transform: uppercase;
-          font-size: 3rem;
-          cursor: crosshair;
+          font-size: 1.5rem;
+          cursor: url('moon.png');
+
+          @media (min-width: 1400px) {
+            font-size: 3rem;
+          }
 
           &.bio {
             margin-right: 17rem;
@@ -322,8 +330,12 @@ router.afterEach(() => {
           color: $primary;
           text-decoration: none;
           text-transform: uppercase;
-          font-size: 2rem;
-          cursor: crosshair;
+          font-size: 1.5rem;
+          cursor: url('moon-cursor.png'), pointer;
+
+          @media (min-width: 1400px) {
+            font-size: 2rem;
+          }
 
           &:hover {
             letter-spacing: 0.5rem;
