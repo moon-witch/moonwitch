@@ -45,7 +45,11 @@ async function submit(form: Object) {
 
 <style scoped lang="scss">
 #mainContainer {
-  margin: 22rem 1rem 4rem 1rem;
+  margin: 9rem 1rem 4rem 1rem;
+
+  @media (min-width: 1400px) {
+    margin: 22rem 1rem 4rem 1rem;
+  }
 
   #title {
     text-align: center;
@@ -92,8 +96,8 @@ async function submit(form: Object) {
       padding: 1rem 0 1rem 9rem;
     }
 
-    @media (min-width: 1300px) {
-      margin: 3rem 40rem;
+    @media (min-width: 1400px) {
+      margin: 3rem 35rem;
       padding: 1rem 3rem;
     }
 

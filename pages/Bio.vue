@@ -7,7 +7,7 @@ useHead({
 <template>
   <div id="bioContainer">
     <div id="headContainer">
-      <img src="/profilepic.jpg" id="imageOfMe" alt="image of moonwitch" />
+      <img src="/profilepicsmol.jpg" id="imageOfMe" alt="image of moonwitch" />
       <span id="nameTag">JOSHUA LANGENBACH</span>
       <div id="backgroundElement"></div>
     </div>
@@ -59,9 +59,25 @@ useHead({
       <div id="topicsContainer">
         <div id="topicsHead">My favorite topics to chat about are</div>
         <ul>
-          <li>artifical intelligence <img src="/pentagram.png" alt="image depicting the interconnectedness of neurons" /></li>
-          <li><img src="/sol.svg" alt="stylized image of a beautiful sun"/>consciousness</li>
-          <li>spirituality<img src="/fibonacci.png" alt="stylized image of the fibonacci sequence"/></li>
+          <li>
+            artifical intelligence
+            <img
+              src="/pentagram.png"
+              alt="image depicting the interconnectedness of neurons"
+            />
+          </li>
+          <li>
+            <img
+              src="/sol.svg"
+              alt="stylized image of a beautiful sun"
+            />consciousness
+          </li>
+          <li>
+            spirituality<img
+              src="/fibonacci.png"
+              alt="stylized image of the fibonacci sequence"
+            />
+          </li>
         </ul>
       </div>
     </div>
@@ -324,14 +340,24 @@ useHead({
     li {
       display: flex;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 0.8rem;
       text-align: center;
-      line-height: 5rem;
+      line-height: 3rem;
+
+      @media (min-width: 1400px) {
+        font-size: 1.5rem;
+        line-height: 5rem;
+      }
 
       img {
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         margin: 0.5rem 1rem 0 1rem;
+
+        @media (min-width: 1400px) {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
   }
