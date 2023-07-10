@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  link: [{ rel: "canonical", href: "https://moonwitch.art/" }],
+  link: [{rel: "canonical", href: "https://moonwitch.art/"}],
 });
 
 const projects = [
@@ -11,38 +11,35 @@ const projects = [
     text1: "this portfolio. 100% built with pure scss, gsap and nuxt.",
     text2: "simple design. purposeful animations. geometrical shapes.",
     tools: ["vue", "gsap", "scss"],
+    link: 'https://moonwitch.art',
     code: "https://github.com/moon-witch/moonwitch",
     codeAlt: "portfolio git repo",
   },
   {
-    name: "portfolio",
-    img: "/moonwitch2.png",
-    alt: "this portfolio",
-    text1: "this portfolio. 100% built with pure scss, gsap and nuxt.",
-    text2: "simple design. purposeful animations. geometrical shapes.",
-    tools: ["vue", "gsap", "scss"],
-    code: "https://github.com/moon-witch/moonwitch",
-    codeAlt: "portfolio git repo",
-  },
-  {
-    name: "portfolio",
-    img: "/moonwitch2.png",
-    alt: "this portfolio",
-    text1: "this portfolio. 100% built with pure scss, gsap and nuxt.",
-    text2: "simple design. purposeful animations. geometrical shapes.",
-    tools: ["vue", "gsap", "scss"],
-    code: "https://github.com/moon-witch/moonwitch",
-    codeAlt: "portfolio git repo",
+    name: "scooty - e-scooter rental",
+    img: "/scootylogo.png",
+    alt: "a website to rent e-scooters",
+    text1: "built with vue, supabase and openStreetMaps",
+    text2: "includes renting, time tracking and admin functionality",
+    tools: ["vue", "supabase", "openStreetMaps"],
+    link: 'https://scooty.vercel.app',
+    code: "https://github.com/moon-witch/scooty",
+    codeAlt: "scooty - e-scooter rental git repo",
   },
 ];
 </script>
 
 <template>
+  <div class="notice">
+    click the logos to check out the live websites
+  </div>
   <div id="container">
     <div v-for="project in projects" id="projectContainer">
       <div id="cardContainer">
         <div id="imgContainer">
-          <img :src="project.img" :alt="project.alt" />
+          <a :href="project.link" target="_blank">
+            <img :src="project.img" :alt="project.alt"/>
+          </a>
         </div>
         <div id="infoContainer">
           <div id="name">{{ project.name }}</div>
@@ -60,11 +57,11 @@ const projects = [
             </div>
             <div id="code">
               <a
-                :href="project.code"
-                target="_blank"
-                :alt="project.codeAlt"
-                rel="noopener"
-                >code</a
+                  :href="project.code"
+                  target="_blank"
+                  :alt="project.codeAlt"
+                  rel="noopener"
+              >code</a
               >
             </div>
           </div>
@@ -75,15 +72,20 @@ const projects = [
 </template>
 
 <style scoped lang="scss">
+.notice {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+}
 #container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 11rem 0;
+  margin: 1rem 0;
   user-select: none;
 
   @media (min-width: 1300px) {
-    margin: 11rem 0 6rem 0;
+    margin: 1rem 0 6rem 0;
     padding: 0 11rem;
   }
 }
