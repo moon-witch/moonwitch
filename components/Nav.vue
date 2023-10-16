@@ -39,6 +39,24 @@ router.afterEach(() => {
         <hr id="footer-border" />
         <div class="footer-text">made by moonwitch</div>
         <div class="footer-text">2023</div>
+        <div class="link-container">
+          <a
+            class="link-logo"
+            href="https://github.com/moon-witch"
+            target="_blank"
+            rel="noopener"
+          >
+            <img id="github" src="/github-mark-white.png" alt="github" />
+          </a>
+          <a
+            class="link-logo"
+            href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
+            target="_blank"
+            rel="noopener"
+          >
+            <img id="linkedin" src="/In-White-26.png" alt="linkedin" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -134,6 +152,7 @@ router.afterEach(() => {
       margin-top: $spacing-lg;
       text-align: center;
       margin-left: -2.5rem;
+      font-size: calc($text-lg * 0.9);
 
       @media (min-width: 710px) {
         margin-top: calc($spacing-lg * 0.75);
@@ -222,6 +241,25 @@ router.afterEach(() => {
       text-align: center;
       color: $bg-dark;
     }
+
+    .link-container {
+      display: flex;
+      width: 50vw;
+      margin: 1rem 0;
+      justify-content: space-evenly;
+
+      #github {
+        width: 2rem;
+        filter: brightness(0) saturate(100%) invert(14%) sepia(8%)
+          saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
+      }
+
+      #linkedin {
+        width: 2rem;
+        filter: brightness(0) saturate(100%) invert(14%) sepia(8%)
+          saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
+      }
+    }
   }
 }
 
@@ -231,7 +269,7 @@ router.afterEach(() => {
   box-shadow: 0 0 9px 3px $bg-dark;
 
   @media (max-width: 1023px) {
-      display: none;
+    display: none;
   }
 
   @media (max-height: 767px) {
@@ -260,7 +298,7 @@ router.afterEach(() => {
           text-decoration: none;
           text-transform: uppercase;
           font-size: 1.5rem;
-          cursor: url('moon.png');
+          cursor: url("moon.png");
 
           @media (min-width: 1400px) {
             font-size: 3rem;
@@ -322,7 +360,7 @@ router.afterEach(() => {
         margin: 1rem 1rem;
         font-family: "Splash", cursive;
 
-        @media(min-width: 1300px) {
+        @media (min-width: 1300px) {
           margin: 1rem 3rem;
         }
         a {
@@ -331,7 +369,7 @@ router.afterEach(() => {
           text-decoration: none;
           text-transform: uppercase;
           font-size: 1.5rem;
-          cursor: url('moon-cursor.png'), pointer;
+          cursor: url("moon-cursor.png"), pointer;
 
           @media (min-width: 1400px) {
             font-size: 2rem;

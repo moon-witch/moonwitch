@@ -58,6 +58,10 @@
   justify-content: space-between;
   height: 3rem;
   width: 100vw;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 }
 
 .container {
