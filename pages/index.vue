@@ -398,14 +398,14 @@ function animatePaths(): void {
 .cls-2,
 .cls-3,
 .cls-4 {
-  stroke: #1d1d1b;
+  stroke: $secondary;
   stroke-miterlimit: 10;
 }
 .cls-1 {
   stroke-width: 2px;
 }
 .cls-2 {
-  fill: #1d1d1b;
+  fill: $secondary;
 }
 .cls-4 {
   stroke-width: 0.75px;

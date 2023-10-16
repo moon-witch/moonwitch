@@ -18,13 +18,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Sono", sans-serif;
   overflow-x: hidden;
   max-width: 1920px;
-}
-
-.font-splash {
-  font-family: "Splash", cursive;
+  font-family: $font-text, serif;
 }
 
 /* width */

@@ -1,8 +1,14 @@
-$primary: #B4C292;
-$secondary: #E8F5C7;
+$primary: #B1D2BE;
+$secondary: #294936;
 
-$bg-bright: #B4C292;
-$bg-dark: #393530;
+$bg-bright: $primary;
+$bg-dark: #212922;
+
+$text-bright: $bg-dark;
+$text-dark: $bg-bright;
+
+$font-header: "moonless_scregular";
+$font-text: "quicksandregular";
 
 $btn-bright: $bg-dark;
 $btn-dark: $bg-bright;

@@ -23,7 +23,7 @@ let currentPath = useRoute();
           </NuxtLink>
         </div>
       </div>
-      <h1 v-if="currentPath.path === '/'" id="moonwitch-name" class="font-alt">
+      <h1 v-if="currentPath.path === '/'" id="moonwitch-name" class="header">
         moonwitch
         <div id="tagline">creative web developer</div>
       </h1>
@@ -42,6 +42,12 @@ let currentPath = useRoute();
   background: $bg-dark;
 }
 
+.header {
+  font-family: $font-header, serif;
+  font-size: calc($text-lg * 2.5);
+  font-weight: 500;
+}
+
 #moonwitch-container {
   width: 100%;
 }
@@ -50,30 +56,27 @@ let currentPath = useRoute();
   text-align: center;
   color: $bg-dark;
   padding: $spacing-sm;
-  margin-top: 1rem;
-  font-size: $text-lg;
-  font-family: "Sono";
-  font-weight: 400;
+  margin: 1.5rem;
   background: $primary;
-
-  @media (min-width: 1300px) {
-    font-size: 2.5rem;
-  }
+  border-radius: 26px;
 }
 
 #tagline {
-  font-size: $text-sm;
+  font-size: calc($text-sm * 2);
+  font-weight: 400;
   color: $bg-dark;
   line-height: 30px;
   margin: 9px 0 0 0;
 
   @media (min-width: 1300px) {
-    font-size: 1.5rem;
+    font-size: calc($text-sm * 2);
   }
 }
 
 #logo-container {
   background: $primary;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 #moonwitch-logo {

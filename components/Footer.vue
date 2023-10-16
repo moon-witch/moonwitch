@@ -64,6 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: $font-header, serif;
   
   @media (min-width: 740px) {
     padding: 0 2rem 0 2rem;
@@ -72,25 +73,27 @@
 
 #nuxt {
   width: 2rem;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
 }
 
 #gsap {
   width: 2rem;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
 }
 
 #github {
   width: 2rem;
-  filter: invert(29%) sepia(0%) saturate(6133%) hue-rotate(343deg) brightness(34%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
 }
 
 #linkedin {
   width: 2rem;
-  filter: invert(29%) sepia(0%) saturate(6133%) hue-rotate(343deg) brightness(34%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
 }
 
 .text-line {
   text-align: center;
-  font-size: calc($text-sm  * 0.7 );
+  font-size: $text-sm;
 }
 
 .link-text {
