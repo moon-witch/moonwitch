@@ -1,9 +1,33 @@
 <script setup lang="ts">
 let currentPath = useRoute();
+
+const viewport = ref(null);
+const isLogoHidden = ref(false);
+let prevScrollPos = ref(0);
+
+const handleScroll = () => {
+  const currentScrollPos = window.scrollY;
+
+  if (currentScrollPos > prevScrollPos.value) {
+    isLogoHidden.value = true;
+  } else {
+    isLogoHidden.value = false;
+  }
+
+  prevScrollPos.value = currentScrollPos;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <div id="viewport">
+  <div id="viewport" ref="viewport">
     <Nav />
     <div id="moonwitch-container">
       <div id="logo-container">
@@ -13,13 +37,13 @@ let currentPath = useRoute();
           src="/moonwitch2.png"
           alt="logo of moonwitch"
         />
-        <div v-else id="smallLogoContainer">
+        <div v-else id="smallLogoContainer" :class="{ hide: isLogoHidden }">
           <NuxtLink to="/">
             <img
-            id="moonwitch-logo-sm"
-            src="/moonwitch2.png"
-            alt="logo of moonwitch"
-          />
+              id="moonwitch-logo-sm"
+              src="/moonwitch2.png"
+              alt="logo of moonwitch"
+            />
           </NuxtLink>
         </div>
       </div>
@@ -29,7 +53,7 @@ let currentPath = useRoute();
       </h1>
     </div>
     <slot />
-    <MoonwitchGlitch v-if="currentPath.path != '/'"/>
+    <MoonwitchGlitch v-if="currentPath.path != '/'" />
     <Footer />
   </div>
 </template>
@@ -97,10 +121,17 @@ let currentPath = useRoute();
 #smallLogoContainer {
   position: fixed;
   background: $bg-bright;
-  width: 100vw;
+  width: 99.5vw;
   height: 95px;
   z-index: 5;
   box-shadow: 0 0 3px 3px $bg-dark;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: all 0.2s ease-out;
+
+  &.hide {
+    transform: translateY(-100px);
+  }
 
   @media (min-width: 1024px) {
     height: 60px;

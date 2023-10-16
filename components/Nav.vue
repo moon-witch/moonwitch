@@ -18,7 +18,15 @@ router.afterEach(() => {
 
 <template>
   <div id="mobileNavContainer">
-    <div id="toggle-switch" :class="{ moved: isExpanded }" @click="toggleNav">
+    <div v-if="path.path === '/'" id="toggle-switch-home" :class="{ moved: isExpanded }" @click="toggleNav">
+      <img
+        src="/triangle.png"
+        :class="{ rotated: isExpanded }"
+        id="toggle-img"
+        alt="nav toggle"
+      />
+    </div>
+    <div v-if="path.path != '/'" id="toggle-switch" @click="toggleNav">
       <img
         src="/triangle.png"
         :class="{ rotated: isExpanded }"
@@ -30,7 +38,7 @@ router.afterEach(() => {
     <div :class="{ expanded: isExpanded }" class="container">
       <ul>
         <li><NuxtLink class="link" to="/">landing</NuxtLink></li>
-        <li><NuxtLink class="link" to="/bio">profile</NuxtLink></li>
+        <li><NuxtLink class="link" to="/bio">about</NuxtLink></li>
         <li><NuxtLink class="link" to="/projects">projects</NuxtLink></li>
         <li><NuxtLink class="link" to="/tools">tools</NuxtLink></li>
         <li><NuxtLink class="link" to="/contact">contact</NuxtLink></li>
@@ -64,7 +72,7 @@ router.afterEach(() => {
   <div id="desktopNavContainer">
     <div v-if="path.path === '/'" id="homePageNav">
       <ul>
-        <li><NuxtLink class="link bio" to="/bio">profile</NuxtLink></li>
+        <li><NuxtLink class="link bio" to="/bio">about</NuxtLink></li>
         <li>
           <NuxtLink class="link projects" to="/projects">projects</NuxtLink>
         </li>
@@ -75,7 +83,7 @@ router.afterEach(() => {
     <div v-else id="notHomePageNav">
       <ul>
         <li><NuxtLink class="link landing center" to="/">landing</NuxtLink></li>
-        <li><NuxtLink class="link bio center" to="/bio">profile</NuxtLink></li>
+        <li><NuxtLink class="link bio center" to="/bio">about</NuxtLink></li>
         <li>
           <NuxtLink class="link projects center" to="/projects"
             >projects</NuxtLink
@@ -180,7 +188,7 @@ router.afterEach(() => {
     }
   }
 
-  #toggle-switch {
+  #toggle-switch-home {
     position: fixed;
     top: 45%;
     left: -9%;
@@ -198,6 +206,26 @@ router.afterEach(() => {
     #toggle-img {
       width: 3rem;
       transform: rotate(90deg);
+    }
+  }
+
+  #toggle-switch {
+    position: fixed;
+    top: 1%;
+    right: 5%;
+    z-index: 999;
+    padding: 0.4rem 0rem 0rem 0.5rem;
+    margin: 0.5rem;
+    background: transparent;
+    border-radius: 0 30px 30px 0;
+
+    @media (min-width: 710px) {
+      left: -3%;
+    }
+
+    #toggle-img {
+      width: 3rem;
+      transform: rotate(-180deg);
     }
   }
 

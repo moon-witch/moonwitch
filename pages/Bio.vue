@@ -42,15 +42,15 @@ useHead({
         <div id="interestsHead">Personally, I am very interested in</div>
         <ul>
           <li>responsible use of technology</li>
-          <li>because the more we create, the more we have to understand</li>
+          <li>the more we create, the more we have to understand</li>
           <li>freedom of speech</li>
           <li>
-            because every voice must be heard, so all beings can coexist
+            every voice must be heard, so all beings can coexist
             peacefully
           </li>
           <li>climate activism</li>
           <li>
-            because mother nature has suffered enough and the least we can do is
+            mother nature has suffered enough and the least we can do is
             help her to recover
           </li>
         </ul>
@@ -60,13 +60,13 @@ useHead({
         <div id="topicsHead">My favorite topics to chat about are</div>
         <ul>
           <li>
-            artifical intelligence
+            art(ifical intelligence)
             <img
               src="/pentagram.png"
               alt="image depicting the interconnectedness of neurons"
             />
           </li>
-          <li>
+          <li style="margin-left: -4rem;">
             <img
               src="/sol.svg"
               alt="stylized image of a beautiful sun"
@@ -86,7 +86,7 @@ useHead({
 
 <style scoped lang="scss">
 #bioContainer {
-  margin: 7rem 0.5rem 5rem 0.5rem;
+  margin: 7rem 0.5rem 3rem 0.5rem;
   padding: 1rem;
   overflow-x: hidden;
   user-select: none;
@@ -147,6 +147,7 @@ useHead({
     top: 27%;
     left: -4%;
     z-index: 1;
+    border-radius: 50px;
 
     @media (min-height: 400px) {
       width: 95vw;
@@ -169,8 +170,8 @@ useHead({
 
 #bodyContainer {
   margin-top: 1rem;
-  background: $secondary;
   padding: 1rem 0 1rem 0;
+  color: $text-dark;
 
   @media (min-width: 1300px) {
     padding: 1rem;
@@ -178,19 +179,20 @@ useHead({
   }
 
   #slogan1 {
-    margin: 2rem;
-    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    font-size: 1.7rem;
   }
 
   #slogan2 {
     text-align: end;
-    margin: 2rem;
-    font-size: 1.1rem;
+    margin: 1.5rem 1rem 0 0;
+    font-size: 1.5rem;
   }
 
   #slogan3 {
     text-align: center;
-    font-size: 1.2rem;
+    margin-top: 3rem;
+    font-size: 1.1rem;
     font-weight: 400;
   }
 }
@@ -199,6 +201,11 @@ useHead({
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
+  color: $text-dark;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 
   @media (min-width: 1300px) {
     padding: 1rem 5rem;
@@ -206,7 +213,7 @@ useHead({
   }
 
   #skillsHead {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
   }
 
@@ -225,6 +232,7 @@ useHead({
       border-radius: 50px;
       width: 100%;
       padding: 0.5rem 2rem 0.5rem 2rem;
+      color: $text-alt;
 
       @media (min-width: 740px) {
         margin: 0.5rem 0 0.5rem 16rem;
@@ -238,6 +246,7 @@ useHead({
     li:nth-of-type(even):not(.long) {
       margin-left: 3rem;
       width: 100%;
+      color: $text-alt;
 
       @media (min-width: 740px) {
         margin: 0.5rem 0 0.5rem 8rem;
@@ -256,13 +265,13 @@ useHead({
   #contact {
     transition: 0.2s ease;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     background: $bg-dark;
     padding: 0.2rem 0 0.2rem 0;
 
     a {
       text-decoration: none;
-      color: $secondary;
+      color: $text-dark;
     }
 
     &:hover {
@@ -282,8 +291,10 @@ useHead({
 
 #interestContainer {
   background: $secondary;
+  border-radius: 50px;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
+  color: $text-dark;
 
   @media (min-width: 1024px) {
     padding: 1rem 5rem;
@@ -291,7 +302,7 @@ useHead({
   }
 
   #interestsHead {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0 1rem 0 1rem;
     text-align: center;
   }
@@ -301,8 +312,8 @@ useHead({
 
     li:nth-of-type(odd) {
       text-align: start;
-      font-size: 1.1rem;
-      margin-left: -1rem;
+      font-size: 1.3rem;
+      margin-left: -2rem;
       padding: 1rem 0 1rem 0;
     }
 
@@ -310,6 +321,7 @@ useHead({
       text-align: end;
       margin: 0 1.5rem 0 0.5rem;
       font-style: italic;
+      color: $text-alt;
     }
   }
 }
@@ -318,6 +330,8 @@ useHead({
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
+  border-radius: 50px;
+  color: $text-dark;
 
   @media (min-width: 1024px) {
     padding: 1rem 5rem;
@@ -325,7 +339,7 @@ useHead({
   }
 
   #topicsHead {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0 1rem 0 1rem;
     text-align: center;
   }
@@ -340,9 +354,11 @@ useHead({
     li {
       display: flex;
       justify-content: center;
-      font-size: 0.8rem;
+      align-items: center;
+      font-size: 1.2rem;
       text-align: center;
       line-height: 3rem;
+      color: $text-alt;
 
       @media (min-width: 1400px) {
         font-size: 1.5rem;
@@ -350,8 +366,8 @@ useHead({
       }
 
       img {
-        width: 2rem;
-        height: 2rem;
+        width: 3rem;
+        height: 3rem;
         margin: 0.5rem 1rem 0 1rem;
 
         @media (min-width: 1400px) {
