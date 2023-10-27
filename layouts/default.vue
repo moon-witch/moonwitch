@@ -32,7 +32,7 @@ onBeforeUnmount(() => {
     <div id="moonwitch-container">
       <div id="logo-container">
         <img
-          v-if="currentPath.path === '/'"
+          v-if="currentPath.path === '/dev'"
           id="moonwitch-logo"
           src="/moonwitch2.png"
           alt="logo of moonwitch"
@@ -47,7 +47,7 @@ onBeforeUnmount(() => {
           </NuxtLink>
         </div>
       </div>
-      <h1 v-if="currentPath.path === '/'" id="moonwitch-name" class="header">
+      <h1 v-if="currentPath.path === '/dev'" id="moonwitch-name" class="header">
         moonwitch
         <div id="tagline">creative web developer</div>
       </h1>

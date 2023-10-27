@@ -1,3 +1,5 @@
+
+// dev
 $primary: #B1D2BE;
 $secondary: #294936;
 
@@ -22,6 +24,25 @@ $btn-letter-space: 2%;
 $border-bright: $primary;
 $border-dark: $secondary;
 
+// artist
+$a-primary: black;
+$a-secondary: rgba(10, 10, 10, 0.55);
+$a-sun: #3D3D3D;
+
+$a-bg-bright: $primary;
+$a-bg-dark: black;
+
+$a-text-bright: $bg-dark;
+$a-text-dark: #EBEBEB;
+$a-text-alt: #8A02F2;
+
+$a-font-header: "moonless_scregular";
+$a-font-text: "quicksandregular";
+
+$btn-bright: $bg-dark;
+$btn-dark: $bg-bright;
+
+//general
 $letter-space-xl: 0%;
 $letter-space-lg: 1%;
 $letter-space-md: 2%;
