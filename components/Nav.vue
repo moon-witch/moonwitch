@@ -37,11 +37,11 @@ router.afterEach(() => {
     <div id="overlay" :class="{ exists: isExpanded }" @click="toggleNav" />
     <div :class="{ expanded: isExpanded }" class="container">
       <ul>
-        <li><NuxtLink class="link" to="/">landing</NuxtLink></li>
-        <li><NuxtLink class="link" to="/bio">about</NuxtLink></li>
-        <li><NuxtLink class="link" to="/projects">projects</NuxtLink></li>
-        <li><NuxtLink class="link" to="/tools">tools</NuxtLink></li>
-        <li><NuxtLink class="link" to="/contact">contact</NuxtLink></li>
+        <li><NuxtLink class="link" to="dev/">landing</NuxtLink></li>
+        <li><NuxtLink class="link" to="dev/bio">about</NuxtLink></li>
+        <li><NuxtLink class="link" to="dev/projects">projects</NuxtLink></li>
+        <li><NuxtLink class="link" to="dev/tools">tools</NuxtLink></li>
+        <li><NuxtLink class="link" to="dev/contact">contact</NuxtLink></li>
       </ul>
       <div id="menu-footer">
         <hr id="footer-border" />
@@ -72,28 +72,27 @@ router.afterEach(() => {
   <div id="desktopNavContainer">
     <div v-if="path.path === '/'" id="homePageNav">
       <ul>
-        <li><NuxtLink class="link bio" to="/bio">about</NuxtLink></li>
+        <li><NuxtLink class="link bio" to="bio">about</NuxtLink></li>
         <li>
-          <NuxtLink class="link projects" to="/projects">projects</NuxtLink>
+          <NuxtLink class="link projects" to="projects">projects</NuxtLink>
         </li>
-        <li><NuxtLink class="link tools" to="/tools">tools</NuxtLink></li>
-        <li><NuxtLink class="link contact" to="/contact">contact</NuxtLink></li>
+        <li><NuxtLink class="link tools" to="tools">tools</NuxtLink></li>
+        <li><NuxtLink class="link contact" to="contact">contact</NuxtLink></li>
       </ul>
     </div>
     <div v-else id="notHomePageNav">
       <ul>
-        <li><NuxtLink class="link landing center" to="/">landing</NuxtLink></li>
-        <li><NuxtLink class="link bio center" to="/bio">about</NuxtLink></li>
+        <li><NuxtLink class="link bio center" to="bio">about</NuxtLink></li>
         <li>
-          <NuxtLink class="link projects center" to="/projects"
+          <NuxtLink class="link projects center" to="projects"
             >projects</NuxtLink
           >
         </li>
         <li>
-          <NuxtLink class="link tools center" to="/tools">tools</NuxtLink>
+          <NuxtLink class="link tools center" to="tools">tools</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="link contact center" to="/contact">contact</NuxtLink>
+          <NuxtLink class="link contact center" to="contact">contact</NuxtLink>
         </li>
       </ul>
     </div>
@@ -103,6 +102,7 @@ router.afterEach(() => {
 <style scoped lang="scss">
 * {
   transition: 0.2s ease-in-out;
+  font-family: $a-font-header;
 }
 
 #mobileNavContainer {
@@ -369,7 +369,7 @@ router.afterEach(() => {
           }
 
           &:hover {
-            letter-spacing: 1rem;
+            letter-spacing: 0.5rem;
           }
         }
       }
@@ -378,7 +378,7 @@ router.afterEach(() => {
 
   #notHomePageNav {
     margin: 60px 0 0 0;
-    width: 100vw;
+    width: 80vw;
     background: $bg-dark;
     ul {
       display: flex;
@@ -404,7 +404,7 @@ router.afterEach(() => {
           }
 
           &:hover {
-            letter-spacing: 0.5rem;
+            letter-spacing: 0.1rem;
           }
         }
       }

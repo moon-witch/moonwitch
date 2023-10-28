@@ -28,7 +28,6 @@ onBeforeUnmount(() => {
 
 <template>
   <div id="viewport" ref="viewport">
-    <Nav />
     <div id="moonwitch-container">
       <div id="logo-container">
         <img
@@ -45,6 +44,7 @@ onBeforeUnmount(() => {
               alt="logo of moonwitch"
             />
           </NuxtLink>
+          <Nav />
         </div>
       </div>
       <h1 v-if="currentPath.path === '/dev'" id="moonwitch-name" class="header">
@@ -62,7 +62,7 @@ onBeforeUnmount(() => {
 #viewport {
   position: absolute;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: $bg-dark;
 }
 
@@ -120,31 +120,29 @@ onBeforeUnmount(() => {
 
 #smallLogoContainer {
   position: fixed;
-  background: $bg-bright;
-  width: 99.5vw;
-  height: 95px;
+  background: transparent;
+  width: 100dvw;
   z-index: 5;
-  box-shadow: 0 0 3px 3px $bg-dark;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
   transition: all 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.hide {
     transform: translateY(-100px);
   }
 
-  @media (min-width: 1024px) {
-    height: 60px;
+  a {
+    width: 20dvw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   #moonwitch-logo-sm {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    margin: auto;
+    left: 2rem;
+    top: 1rem;
     width: 23%;
 
     @media (min-width: 710px) {

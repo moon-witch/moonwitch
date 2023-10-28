@@ -32,7 +32,7 @@ onUpdated(() => {
 const r180 = Math.PI
 const r90 = Math.PI / 2
 const r15 = Math.PI / 12
-const color = '#88888825'
+const color = '#88888850'
 
 const el = ref<HTMLCanvasElement | null>(null)
 
@@ -201,7 +201,7 @@ const mask = computed(() => 'radial-gradient(circle, transparent, black);')
   pointer-events: none;
 
   &.dev {
-    left: 130dvh;
+    left: 135dvh;
   }
 }
 </style>

@@ -1,66 +1,82 @@
 <template>
   <div id="footer">
-    <div class="container">
-      <span class="link-text">built with:</span>
-      <a
-        id="nuxt"
-        class="link-logo"
-        href="https://nuxt.com"
-        target="_blank"
-        rel="noopener"
-      >
-        <img id="nuxt" src="/icon-black.svg" alt="nuxt" />
-      </a>
-      <a
-        class="link-logo"
-        href="https://greensock.com/gsap/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img
-          id="gsap"
-          src="/greensock-gsap-icon-seeklogo.com.svg"
-          alt="gsap"
-        />
-      </a>
+    <div class="copyright">
+      <div class="container text-line">moonwitch © 2023</div>
     </div>
-    <div class="container text-line">moonwitch © 2023</div>
-    <div class="container">
-      <span class="link-text">find me on:</span>
-      <a
-        class="link-logo"
-        href="https://github.com/moon-witch"
-        target="_blank"
-        rel="noopener"
-      >
-        <img id="github" src="/github-mark-white.png" alt="github" />
-      </a>
-      <a
-        class="link-logo"
-        href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
-        target="_blank"
-        rel="noopener"
-      >
-        <img id="linkedin" src="/In-White-26.png" alt="linkedin" />
-      </a>
+    <div class="links">
+      <div class="container">
+        <span class="link-text">built with:</span>
+        <a
+            id="nuxt"
+            class="link-logo"
+            href="https://nuxt.com"
+            target="_blank"
+            rel="noopener"
+        >
+          <img id="nuxt" src="/icon-black.svg" alt="nuxt" />
+        </a>
+        <a
+            class="link-logo"
+            href="https://greensock.com/gsap/"
+            target="_blank"
+            rel="noopener"
+        >
+          <img
+              id="gsap"
+              src="/greensock-gsap-icon-seeklogo.com.svg"
+              alt="gsap"
+          />
+        </a>
+      </div>
+      <div class="container">
+        <span class="link-text">find me on:</span>
+        <a
+            class="link-logo"
+            href="https://github.com/moon-witch"
+            target="_blank"
+            rel="noopener"
+        >
+          <img id="github" src="/github-mark-white.png" alt="github" />
+        </a>
+        <a
+            class="link-logo"
+            href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
+            target="_blank"
+            rel="noopener"
+        >
+          <img id="linkedin" src="/In-White-26.png" alt="linkedin" />
+        </a>
+      </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
 #footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background: $bg-bright;
-  color: $bg-dark;
+  color: $a-text-dark;
   display: flex;
-  justify-content: space-between;
-  height: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
   width: 100vw;
+  font-size: 25px;
+  position: absolute;
+  bottom: 0;
 
   @media (max-width: 1023px) {
     display: none;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -77,27 +93,22 @@
 
 #nuxt {
   width: 2rem;
-  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #gsap {
   width: 2rem;
-  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #github {
   width: 2rem;
-  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #linkedin {
   width: 2rem;
-  filter: brightness(0) saturate(100%) invert(14%) sepia(8%) saturate(1026%) hue-rotate(76deg) brightness(94%) contrast(94%);
-}
-
-.text-line {
-  text-align: center;
-  font-size: $text-sm;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 .link-text {
@@ -121,4 +132,5 @@
 }
 </style>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>

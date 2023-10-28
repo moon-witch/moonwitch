@@ -360,6 +360,7 @@ function animatePaths(): void {
 #sol-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2rem 0 0 0;
   height: 50vh;
   overflow: hidden;
