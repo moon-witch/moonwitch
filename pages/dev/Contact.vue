@@ -60,7 +60,8 @@ async function submit(form: Object) {
     text-align: center;
     margin: 2rem 0 0 0;
     user-select: none;
-    color: $secondary;
+    color: $text-dark;
+    font-weight: bold;
 
     #first {
       margin-bottom: 2rem;
@@ -81,6 +82,7 @@ async function submit(form: Object) {
     margin: 1rem 1rem 0 1rem;
     padding: 1rem 0 1rem 1rem;
     font-size: 1.1rem;
+    font-weight: bold;
     background: $secondary;
     display: flex;
     flex-direction: column;

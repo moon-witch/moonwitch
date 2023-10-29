@@ -372,7 +372,7 @@ function animatePaths(): void {
   }
 
   @media (min-width: 1024px) {
-    height: 60vh;
+    height: 90vh;
   }
 }
 

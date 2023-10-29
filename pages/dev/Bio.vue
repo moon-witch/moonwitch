@@ -34,7 +34,7 @@ useHead({
           ...and anything else you'd like to see as a website.
         </li>
       </ul>
-      <div id="contact"><NuxtLink to="/contact">contact me</NuxtLink></div>
+      <div id="contact"><NuxtLink to="contact">contact me</NuxtLink></div>
     </div>
 
     <div id="interestTopic">
@@ -87,7 +87,7 @@ useHead({
 <style scoped lang="scss">
 #bioContainer {
   margin: 7rem 0.5rem 3rem 0.5rem;
-  padding: 1rem;
+  padding: 9rem;
   overflow-x: hidden;
   user-select: none;
 
@@ -147,7 +147,6 @@ useHead({
     top: 27%;
     left: -4%;
     z-index: 1;
-    border-radius: 50px;
 
     @media (min-height: 400px) {
       width: 95vw;
@@ -202,10 +201,7 @@ useHead({
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
   color: $text-dark;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 50px 50px 0 0;
 
   @media (min-width: 1300px) {
     padding: 1rem 5rem;
@@ -224,6 +220,7 @@ useHead({
       margin: 0.5rem 0 0.2rem 0;
       line-height: 1.6rem;
       padding: 0.5rem 2rem 0.5rem 2rem;
+      font-weight: bold;
     }
 
     li:not(.long) {
@@ -239,7 +236,7 @@ useHead({
       }
 
       @media (min-width: 1300px) {
-        margin: 0.5rem 0 0.5rem 22rem;
+        margin: 0.5rem 0 0.5rem 16rem;
       }
     }
 
@@ -253,7 +250,7 @@ useHead({
       }
 
       @media (min-width: 1300px) {
-        margin: 0.5rem 0 0.5rem 11rem;
+        margin: 0.5rem 0 0.5rem 7rem;
       }
     }
 
@@ -291,7 +288,6 @@ useHead({
 
 #interestContainer {
   background: $secondary;
-  border-radius: 50px;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
   color: $text-dark;
@@ -330,7 +326,6 @@ useHead({
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
-  border-radius: 50px;
   color: $text-dark;
 
   @media (min-width: 1024px) {
@@ -348,7 +343,7 @@ useHead({
     list-style: none;
 
     @media (min-width: 1024px) {
-      margin: 4rem 0 0 0;
+      margin: 2rem 0 0 0;
     }
 
     li {

@@ -91,10 +91,9 @@ const projects = [
 }
 
 #cardContainer {
-  height: 20rem;
+  height: 23rem;
   margin: 1rem;
   position: relative;
-  border: 3px dashed $secondary;
 
   @media (min-width: 740px) {
     width: 80vw;
@@ -116,12 +115,15 @@ const projects = [
       right: 0;
       left: 0;
       margin: 0 auto;
+      background: black;
+      border-radius: 0 0 50px 50px;
+      padding: 1rem 1rem 1rem 1rem;
     }
   }
 
   #infoContainer {
     position: relative;
-    height: 10rem;
+    height: 13rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -129,14 +131,15 @@ const projects = [
 
     #name {
       text-align: center;
-      margin: 1rem 0 -1rem 0;
+      margin: 2rem 0 -1rem 0;
       color: $secondary;
       font-size: 1.2rem;
+      font-weight: bold;
     }
 
     #text1 {
       margin: 0 0 0 0.5rem;
-      color: $secondary;
+      color: $text-dark;
 
       @media (min-width: 1300px) {
         margin: 0.5rem 0 -1rem 2rem;
@@ -146,7 +149,7 @@ const projects = [
     #text2 {
       text-align: end;
       margin: 0 0 1rem 0;
-      color: $secondary;
+      color: $text-dark;
 
       @media (min-width: 1300px) {
         margin: 0.5rem 1rem 1rem 0;

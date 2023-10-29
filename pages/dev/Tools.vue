@@ -118,6 +118,7 @@ const tools = {
 
 #mainContainer {
   margin: 7rem 0 4rem 0;
+  padding-bottom: 7rem;
   user-select: none;
 
   @media (min-width: 1300px) {
@@ -132,7 +133,8 @@ const tools = {
     margin: 3rem 0 1rem 0;
     font-size: 1.2rem;
     text-align: center;
-    color: $secondary;
+    color: $text-dark;
+    font-weight: bold;
 
     @media (min-width: 1024px) {
       font-size: 1.5rem;
