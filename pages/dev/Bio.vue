@@ -143,7 +143,7 @@ useHead({
   #backgroundElement {
     position: absolute;
     height: 75px;
-    background: $primary;
+    background: $secondary;
     top: 27%;
     left: -4%;
     z-index: 1;

@@ -6,12 +6,15 @@ definePageMeta({
 
 <template>
   <div class="artist-container">
-    <div class="maintenance">
-      this will soon have content
-      <NuxtLink to="/">
-        back
-      </NuxtLink>
-    </div>
+    <NuxtLink to="/artist/macrame" class="third macrame">
+      macrame
+    </NuxtLink>
+    <NuxtLink to="/artist/audio" class="third audio">
+      audio
+    </NuxtLink>
+    <NuxtLink to="/artist/visual" class="third visual">
+      visual
+    </NuxtLink>
   </div>
 </template>
 
@@ -22,20 +25,28 @@ definePageMeta({
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $text-dark;
 
-  .maintenance {
-    color: white;
-    font-size: 50px;
+  .third {
+    height: 100dvh;
+    width: 33.3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    opacity: 50%;
+    font-size: 40px;
+    transition: 0.4s ease-in-out;
+    background: black;
+    text-decoration: none;
 
-    a {
+    &:hover {
+      background: $a-secondary;
+      cursor: pointer;
+      opacity: 100;
+    }
+
+    &:visited {
       color: $a-sun;
-      margin-top: 2rem;
-      font-size: 30px;
-      text-decoration: none;
     }
   }
 }
