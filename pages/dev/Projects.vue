@@ -30,39 +30,41 @@ const projects = [
 </script>
 
 <template>
-  <div class="notice">
-    click the logos to check out the live websites
-  </div>
-  <div id="container">
-    <div v-for="project in projects" id="projectContainer">
-      <div id="cardContainer">
-        <div id="imgContainer">
-          <a :href="project.link" target="_blank">
-            <img :src="project.img" :alt="project.alt"/>
-          </a>
-        </div>
-        <div id="infoContainer">
-          <div id="name">{{ project.name }}</div>
-          <div id="text1">
-            {{ project.text1 }}
+  <div>
+    <div class="notice">
+      click the logos to check out the live websites
+    </div>
+    <div id="container">
+      <div v-for="project in projects" id="projectContainer">
+        <div id="cardContainer">
+          <div id="imgContainer">
+            <a :href="project.link" target="_blank">
+              <img :src="project.img" :alt="project.alt"/>
+            </a>
           </div>
-          <div id="text2">
-            {{ project.text2 }}
-          </div>
-        </div>
-        <div id="techContainer">
-          <div id="text">
-            <div id="tools">
-              <div v-for="tool in project.tools">{{ tool }}</div>
+          <div id="infoContainer">
+            <div id="name">{{ project.name }}</div>
+            <div id="text1">
+              {{ project.text1 }}
             </div>
-            <div id="code">
-              <a
-                  :href="project.code"
-                  target="_blank"
-                  :alt="project.codeAlt"
-                  rel="noopener"
-              >code</a
-              >
+            <div id="text2">
+              {{ project.text2 }}
+            </div>
+          </div>
+          <div id="techContainer">
+            <div id="text">
+              <div id="tools">
+                <div v-for="tool in project.tools">{{ tool }}</div>
+              </div>
+              <div id="code">
+                <a
+                    :href="project.code"
+                    target="_blank"
+                    :alt="project.codeAlt"
+                    rel="noopener"
+                >code</a
+                >
+              </div>
             </div>
           </div>
         </div>

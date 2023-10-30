@@ -5,38 +5,40 @@ definePageMeta({
 </script>
 
 <template>
-  <NuxtLink to="/" class="main-link">
-    <img
-        id="moonwitch-logo-sm"
-        src="/moonwitch2.png"
-        alt="logo of moonwitch"
-    />
-  </NuxtLink>
-  <div class="artist-container">
-    <NuxtLink to="/artist/macrame" class="third">
-      <div class="text">
-        macrame
-      </div>
-      <div class="soundwaves">
-        <img src="/strings.png" alt="strings" class="macrame"/>
-      </div>
+  <div>
+    <NuxtLink to="/" class="main-link">
+      <img
+          id="moonwitch-logo-sm"
+          src="/moonwitch2.png"
+          alt="logo of moonwitch"
+      />
     </NuxtLink>
-    <NuxtLink to="/artist/audio" class="third">
-      <div class="text">
-        audio
-      </div>
-      <div class="soundwaves">
-        <img src="/lines.png" alt="lines" class="audio"/>
-      </div>
-    </NuxtLink>
-    <NuxtLink to="/artist/visual" class="third">
-      <div class="text">
-        visual
-      </div>
-      <div class="soundwaves">
-        <img src="/visual.png" alt="visual" class="visual"/>
-      </div>
-    </NuxtLink>
+    <div class="artist-container">
+      <NuxtLink to="/artist/macrame" class="third">
+        <div class="text">
+          macrame
+        </div>
+        <div class="soundwaves">
+          <img src="/strings.png" alt="strings" class="macrame"/>
+        </div>
+      </NuxtLink>
+      <NuxtLink to="/artist/audio" class="third">
+        <div class="text">
+          audio
+        </div>
+        <div class="soundwaves">
+          <img src="/lines.png" alt="lines" class="audio"/>
+        </div>
+      </NuxtLink>
+      <NuxtLink to="/artist/visual" class="third">
+        <div class="text">
+          visual
+        </div>
+        <div class="soundwaves">
+          <img src="/visual.png" alt="visual" class="visual"/>
+        </div>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 

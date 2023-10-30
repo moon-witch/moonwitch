@@ -82,17 +82,17 @@ router.afterEach(() => {
     </div>
     <div v-else id="notHomePageNav">
       <ul>
-        <li><NuxtLink class="link bio center" to="bio">about</NuxtLink></li>
+        <li><NuxtLink class="link bio center" to="/dev/bio">about</NuxtLink></li>
         <li>
-          <NuxtLink class="link projects center" to="projects"
+          <NuxtLink class="link projects center" to="/dev/projects"
             >projects</NuxtLink
           >
         </li>
         <li>
-          <NuxtLink class="link tools center" to="tools">tools</NuxtLink>
+          <NuxtLink class="link tools center" to="/dev/tools">tools</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="link contact center" to="contact">contact</NuxtLink>
+          <NuxtLink class="link contact center" to="/dev/contact">contact</NuxtLink>
         </li>
       </ul>
     </div>
