@@ -92,7 +92,8 @@ useHead({
   user-select: none;
 
   @media (min-width: 710px) {
-    margin: 7rem 3rem 5rem 3rem;
+    margin: 0 3rem 5rem 3rem;
+    padding-bottom: 9rem;
   }
 }
 
