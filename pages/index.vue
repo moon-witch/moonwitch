@@ -376,25 +376,26 @@ function animatePaths(): void {
   .moonwitch-header {
     color: $a-text-dark;
     font-size: 35px;
-    margin-top: 9rem;
+    margin-top: 13rem;
     letter-spacing: 0.2rem;
 
     @media (min-width: 1024px) {
-      font-size: 70px;
+      font-size: 90px;
       margin-top: 2rem;
     }
   }
 
   .moonwitch-nav {
     color: $a-text-dark;
+    font-size: 23px;
 
 
     @media (min-width: 710px) {
-      font-size: 20px;
+      font-size: 35px;
     }
 
     @media (min-width: 1024px) {
-      font-size: 30px;
+      font-size: 50px;
     }
 
     .icon {
@@ -402,11 +403,11 @@ function animatePaths(): void {
 
 
       @media (min-width: 710px) {
-        font-size: 30px;
+        font-size: 50px;
       }
 
       @media (min-width: 1024px) {
-        font-size: 45px;
+        font-size: 65px;
       }
     }
 
@@ -481,11 +482,11 @@ function animatePaths(): void {
       transform: rotateX(180deg) rotate(-90deg);
 
       @media (min-width: 710px) {
-        width: 30rem;
+        width: 20rem;
       }
 
       @media (min-width: 1024px) {
-        width: 20rem;
+        width: 25rem;
       }
 
       .cls-1,

@@ -48,8 +48,16 @@ definePageMeta({
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 5%;
+  width: 20%;
   z-index: 3;
+
+  @media (min-width: 710px) {
+    width: 15%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 5%;
+  }
 }
 .artist-container {
   background: black;
@@ -67,7 +75,7 @@ definePageMeta({
     height: 100dvh;
     width: 33.3%;
     display: flex;
-    //justify-content: center;
+    justify-content: center;
     align-items: center;
     opacity: 50%;
     font-size: 40px;

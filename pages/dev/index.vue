@@ -65,7 +65,7 @@ function animatePaths(): void {
 </script>
 
 <template>
-  <div id="sol-container">
+  <div class="sol-container">
     <svg
         id="Layer_1"
         class="sol"
@@ -357,11 +357,11 @@ function animatePaths(): void {
 </template>
 
 <style scoped lang="scss">
-#sol-container {
+.sol-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 0 0;
+  padding: 22rem 0 0 0;
   height: 50vh;
   overflow: hidden;
   background: $bg-dark;

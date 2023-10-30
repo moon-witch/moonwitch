@@ -30,7 +30,7 @@ const projects = [
 </script>
 
 <template>
-  <div>
+  <div class="project-container">
     <div class="notice">
       click the logos to check out the live websites
     </div>
