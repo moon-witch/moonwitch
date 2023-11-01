@@ -367,12 +367,11 @@ function animatePaths(): void {
   background: $bg-dark;
 
   @media (min-width: 710px) {
-    padding: 3rem 1rem 3rem 1rem;
-    height: 70vh;
+    padding: 32rem 1rem 0 1rem;
   }
 
   @media (min-width: 1024px) {
-    height: 90vh;
+    padding: 15rem 0;
   }
 }
 
@@ -382,7 +381,7 @@ function animatePaths(): void {
   transform: rotateX(180deg);
 
   @media (min-width: 710px) {
-    width: 50rem;
+    width: 25rem;
   }
 
   @media (min-width: 1024px) {

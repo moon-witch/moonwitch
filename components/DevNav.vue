@@ -10,7 +10,11 @@ const path = computed(() => {
   return route.value = useRoute().fullPath
 })
 
-const { width, height } = useWindowSize()
+const windowWidth = computed(() => {
+  const { width, height } = useWindowSize()
+  console.log(width.value)
+  return width.value
+})
 </script>
 
 <template>
@@ -18,7 +22,7 @@ const { width, height } = useWindowSize()
     <ul :class="{ isHome: path === '/dev/'}">
       <li>
         <NuxtLink class="link bio" to="/dev/bio">
-          <div v-if="path === '/dev/' && width < 1024">
+          <div v-if="windowWidth > 800">
             about
           </div>
           <div v-else >
@@ -28,7 +32,7 @@ const { width, height } = useWindowSize()
       </li>
       <li>
         <NuxtLink class="link projects" to="/dev/projects">
-          <div v-if="path === '/dev/' && width < 1024">
+          <div v-if="windowWidth > 800">
             projects
           </div>
           <div v-else >
@@ -39,7 +43,7 @@ const { width, height } = useWindowSize()
       </li>
       <li>
         <NuxtLink class="link tools" to="/dev/tools">
-          <div v-if="path === '/dev/' && width < 1024">
+          <div v-if="windowWidth > 800">
             tools
           </div>
           <div v-else >
@@ -49,7 +53,7 @@ const { width, height } = useWindowSize()
       </li>
       <li>
         <NuxtLink class="link contact" to="/dev/contact">
-          <div v-if="path === '/dev/' && width < 1024">
+          <div v-if="windowWidth > 800">
             contact
           </div>
           <div v-else >
@@ -63,7 +67,6 @@ const { width, height } = useWindowSize()
 
 <style scoped lang="scss">
 * {
-  transition: 0.2s ease-in-out;
   font-family: $a-font-header;
 }
 
@@ -75,7 +78,12 @@ const { width, height } = useWindowSize()
   width: 100dvw;
   background: $bg-dark;
 
+  @media (min-width: 710px) {
+    top: 6rem;
+  }
+
   @media (min-width: 1024px) {
+    top: 0;
     width: 80dvw;
   }
 
@@ -84,13 +92,22 @@ const { width, height } = useWindowSize()
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
+    color: $text-dark;
+    transition: 0.2s ease-in-out;
 
     &.isHome {
       flex-direction: column;
-    }
+      gap: 2rem;
 
-    @media (min-width: 1024px) {
-      flex-direction: row;
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
+
+      li a {
+        @media (min-width: 710px) {
+          font-size: 60px;
+        }
+      }
     }
 
     li {
@@ -108,8 +125,12 @@ const { width, height } = useWindowSize()
         text-transform: uppercase;
         font-size: 30px;
 
+        @media (min-width: 710px) {
+          font-size: 50px;
+        }
+
         @media (min-width: 1400px) {
-          font-size: 2rem;
+          font-size: 50px;
         }
 
         &:hover {
@@ -119,6 +140,7 @@ const { width, height } = useWindowSize()
     }
 
     .router-link-exact-active {
+      transition: 0.7s ease-in-out;
       color: $secondary;
     }
   }

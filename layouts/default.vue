@@ -70,8 +70,16 @@ onBeforeUnmount(() => {
     align-items: center;
     background: $bg-dark;
 
+    @media (min-width: 710px) {
+      height: 7rem;
+    }
+
     &.hide {
       transform: translateY(-64px);
+
+      @media (min-width: 710px) {
+        transform: translateY(-90px)
+      }
     }
 
     a {
@@ -86,7 +94,7 @@ onBeforeUnmount(() => {
 
       .moonwitch-logo-sm {
         position: absolute;
-        top: 0.1rem;
+        top: 1.5rem;
         width: 14%;
         left: 50%;
         transform: translateX(-50%);
@@ -97,7 +105,7 @@ onBeforeUnmount(() => {
 
         @media (min-width: 1024px) {
           width: 60px;
-          left: 2rem;
+          left: 7rem;
           transform: none;
         }
       }

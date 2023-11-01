@@ -378,6 +378,11 @@ function animatePaths(): void {
     margin-top: 15rem;
     letter-spacing: 0.2rem;
 
+    @media (min-width: 710px) {
+      font-size: 90px;
+      margin-top: 20rem;
+    }
+
     @media (min-width: 1024px) {
       font-size: 90px;
       margin-top: 2rem;
@@ -390,7 +395,7 @@ function animatePaths(): void {
 
 
     @media (min-width: 710px) {
-      font-size: 35px;
+      font-size: 40px;
     }
 
     @media (min-width: 1024px) {
@@ -469,7 +474,7 @@ function animatePaths(): void {
     margin-top: 2rem;
 
     @media (min-width: 710px) {
-      margin-top: 12rem;
+      margin-top: 7rem;
     }
 
     @media (min-width: 1024px) {

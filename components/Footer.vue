@@ -2,7 +2,6 @@
   <div id="footer">
     <div class="links">
       <div class="container">
-        <span class="link-text">find me on:</span>
         <a
             class="link-logo"
             href="https://github.com/moon-witch"
@@ -52,6 +51,10 @@
       color: $text-dark;
       text-decoration: none;
 
+      @media (min-width: 710px) {
+        font-size: 25px;
+      }
+
       &:hover {
         cursor: pointer;
       }
@@ -86,27 +89,29 @@
 
   .legal-name {
     font-size: 19px;
+
+    @media (min-width: 710px) {
+      font-size: 35px;
+    }
   }
-}
-
-#nuxt {
-  width: 1.5rem;
-  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
-}
-
-#gsap {
-  width: 1.5rem;
-  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #github {
   width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
+
+  @media (min-width: 710px) {
+    width: 2.5rem;
+  }
 }
 
 #linkedin {
   width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
+
+  @media (min-width: 710px) {
+    width: 2.5rem;
+  }
 }
 
 .link-text {

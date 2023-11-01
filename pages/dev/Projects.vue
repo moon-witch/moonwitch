@@ -125,7 +125,7 @@ const projects = [
       margin: 0 auto;
       background: black;
       border-radius: 0 0 50px 50px;
-      padding: 1rem 1rem 1rem 1rem;
+      padding: 1rem;
     }
   }
 

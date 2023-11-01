@@ -47,6 +47,10 @@ async function submit(form: Object) {
 .mainContainer {
   margin: 12rem 1rem 4rem 1rem;
 
+  @media (min-width: 710px) {
+    margin: 28rem 1rem 4rem 1rem;
+  }
+
   @media (min-width: 1400px) {
     margin: 22rem 1rem 4rem 1rem;
   }

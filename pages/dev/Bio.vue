@@ -91,7 +91,7 @@ useHead({
   user-select: none;
 
   @media (min-width: 710px) {
-    margin: 0 3rem 5rem 3rem;
+    margin: 18rem 3rem 5rem 3rem;
     padding-bottom: 9rem;
   }
 }
@@ -134,6 +134,7 @@ useHead({
   #nameTag {
     font-size: 1.5rem;
     z-index: 2;
+    font-weight: bold;
 
     @media (min-width: 1300px) {
       font-size: 2rem;
@@ -148,14 +149,10 @@ useHead({
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-
-    @media (min-height: 400px) {
-      width: 95vw;
-    }
+    width: 95vw;
 
     @media (min-width: 710px) {
       width: 100vw;
-      left: -11%;
     }
 
     @media (min-width: 1300px) {
