@@ -27,9 +27,8 @@ onMounted(() => {
 
 function animatePaths(): void {
   const paths = sol.value?.querySelectorAll("path");
-  const lines = sol.value?.querySelectorAll("path.cls-3");
 
-  if (paths && lines) {
+  if (paths) {
     gsap.set(paths, { strokeDasharray: 2000 });
 
     paths.forEach((path: SVGPathElement, index: number) => {
@@ -376,7 +375,7 @@ function animatePaths(): void {
   .moonwitch-header {
     color: $a-text-dark;
     font-size: 35px;
-    margin-top: 13rem;
+    margin-top: 15rem;
     letter-spacing: 0.2rem;
 
     @media (min-width: 1024px) {
@@ -477,7 +476,7 @@ function animatePaths(): void {
       margin-top: 12rem;
     }
     .sol {
-      width: 15rem;
+      width: 12rem;
       padding: 1rem;
       transform: rotateX(180deg) rotate(-90deg);
 

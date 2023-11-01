@@ -1,33 +1,6 @@
 <template>
   <div id="footer">
-    <div class="copyright">
-      <div class="container text-line">moonwitch © 2023</div>
-    </div>
     <div class="links">
-      <div class="container">
-        <span class="link-text">built with:</span>
-        <a
-            id="nuxt"
-            class="link-logo"
-            href="https://nuxt.com"
-            target="_blank"
-            rel="noopener"
-        >
-          <img id="nuxt" src="/icon-black.svg" alt="nuxt" />
-        </a>
-        <a
-            class="link-logo"
-            href="https://greensock.com/gsap/"
-            target="_blank"
-            rel="noopener"
-        >
-          <img
-              id="gsap"
-              src="/greensock-gsap-icon-seeklogo.com.svg"
-              alt="gsap"
-          />
-        </a>
-      </div>
       <div class="container">
         <span class="link-text">find me on:</span>
         <a
@@ -38,6 +11,7 @@
         >
           <img id="github" src="/github-mark-white.png" alt="github" />
         </a>
+        <div class="legal-name third">moonwitch © 2023</div>
         <a
             class="link-logo"
             href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
@@ -47,6 +21,10 @@
           <img id="linkedin" src="/In-White-26.png" alt="linkedin" />
         </a>
       </div>
+    </div>
+    <div class="copyright">
+      <NuxtLink to="/imprint" class="legal-link third">imprint</NuxtLink>
+      <NuxtLink to="/disclaimer" class="legal-link third">disclaimer</NuxtLink>
     </div>
     </div>
 </template>
@@ -63,15 +41,30 @@
   position: absolute;
   bottom: 0;
 
-  @media (max-width: 1023px) {
-    display: none;
-  }
-
   .copyright {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
+
+    .legal-link {
+      font-size: 12px;
+      color: $text-dark;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:visited {
+        color: $text-dark;
+      }
+    }
+
+    .third {
+      width: 33.3%;
+      text-align: center;
+    }
   }
 
   .links {
@@ -85,29 +78,34 @@
   justify-content: space-between;
   align-items: center;
   font-family: $font-header, serif;
+  gap: 2rem;
   
   @media (min-width: 740px) {
     padding: 0 2rem 0 2rem;
   }
+
+  .legal-name {
+    font-size: 19px;
+  }
 }
 
 #nuxt {
-  width: 2rem;
+  width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #gsap {
-  width: 2rem;
+  width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #github {
-  width: 2rem;
+  width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 
 #linkedin {
-  width: 2rem;
+  width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 }
 

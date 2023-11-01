@@ -61,7 +61,8 @@ definePageMeta({
 }
 .artist-container {
   background: black;
-  height: 100dvh;
+  height: calc(100dvh - 9rem);
+  padding: 6rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +70,11 @@ definePageMeta({
 
   @media(max-width: 1023px) {
     flex-direction: column;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0;
+    height: 100dvh;
   }
 
   .third {
@@ -94,6 +100,7 @@ definePageMeta({
       z-index: 2;
       text-align: center;
       width: 100%;
+      color: $text-dark;
     }
 
     .soundwaves{

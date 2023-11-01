@@ -86,8 +86,7 @@ useHead({
 
 <style scoped lang="scss">
 #bioContainer {
-  margin: 7rem 0.5rem 3rem 0.5rem;
-  padding: 9rem;
+  margin: 9rem 1rem;
   overflow-x: hidden;
   user-select: none;
 
@@ -146,7 +145,8 @@ useHead({
     height: 75px;
     background: $secondary;
     top: 27%;
-    left: -4%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 
     @media (min-height: 400px) {
@@ -180,7 +180,7 @@ useHead({
 
   #slogan1 {
     margin-left: 0.5rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   #slogan2 {
@@ -231,6 +231,7 @@ useHead({
       width: 100%;
       padding: 0.5rem 2rem 0.5rem 2rem;
       color: $text-alt;
+      margin-left: 3rem;
 
       @media (min-width: 740px) {
         margin: 0.5rem 0 0.5rem 16rem;
@@ -242,7 +243,7 @@ useHead({
     }
 
     li:nth-of-type(even):not(.long) {
-      margin-left: 3rem;
+      margin-left: 6rem;
       width: 100%;
       color: $text-alt;
 
@@ -309,9 +310,14 @@ useHead({
 
     li:nth-of-type(odd) {
       text-align: start;
-      font-size: 1.3rem;
-      margin-left: -2rem;
+      font-size: 1.1rem;
+      margin-left: 1rem;
       padding: 1rem 0 1rem 0;
+
+      @media (min-width: 1024px) {
+        margin-left: -2rem;
+        font-size: 1.3rem;
+      }
     }
 
     li:nth-of-type(even) {

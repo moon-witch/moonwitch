@@ -361,7 +361,7 @@ function animatePaths(): void {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 22rem 0 0 0;
+  padding: 16rem 0 0 0;
   height: 50vh;
   overflow: hidden;
   background: $bg-dark;

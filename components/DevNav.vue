@@ -70,8 +70,8 @@ const { width, height } = useWindowSize()
 .dev-nav {
   position: fixed;
   z-index: 5;
-  box-shadow: 0 0 9px 3px $bg-dark;
-  top: 6rem;
+  box-shadow: 0 3px 3px 0 $bg-dark;
+  top: 3rem;
   width: 100dvw;
   background: $bg-dark;
 
@@ -82,6 +82,7 @@ const { width, height } = useWindowSize()
   ul {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     margin-top: 1rem;
 
     &.isHome {
@@ -94,7 +95,7 @@ const { width, height } = useWindowSize()
 
     li {
       list-style: none;
-      margin: 1rem auto;
+      margin: 0.5rem auto;
       font-family: "Splash", cursive;
 
       @media (min-width: 1024px) {

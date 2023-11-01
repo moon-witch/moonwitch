@@ -34,36 +34,35 @@ const projects = [
     <div class="notice">
       click the logos to check out the live websites
     </div>
-    <div id="container">
-      <div v-for="project in projects" id="projectContainer">
-        <div id="cardContainer">
-          <div id="imgContainer">
+    <div class="container">
+      <div v-for="project in projects" class="projectContainer">
+        <div class="cardContainer">
+          <div class="imgContainer">
             <a :href="project.link" target="_blank">
               <img :src="project.img" :alt="project.alt"/>
             </a>
           </div>
-          <div id="infoContainer">
-            <div id="name">{{ project.name }}</div>
-            <div id="text1">
+          <div class="infoContainer">
+            <div class="name">{{ project.name }}</div>
+            <div class="text1">
               {{ project.text1 }}
             </div>
-            <div id="text2">
+            <div class="text2">
               {{ project.text2 }}
             </div>
           </div>
-          <div id="techContainer">
-            <div id="text">
-              <div id="tools">
-                <div v-for="tool in project.tools">{{ tool }}</div>
+          <div class="techContainer">
+            <div class="text">
+              <div class="tools">
+                <div v-for="tool in project.tools" class="tool">{{ tool }}</div>
               </div>
-              <div id="code">
+              <div class="code">
                 <a
                     :href="project.code"
                     target="_blank"
                     :alt="project.codeAlt"
                     rel="noopener"
-                >code</a
-                >
+                >code</a>
               </div>
             </div>
           </div>
@@ -74,17 +73,24 @@ const projects = [
 </template>
 
 <style scoped lang="scss">
+.project-container {
+  margin: 9rem 0 7rem 0;
+  overflow-x: hidden;
+}
 .notice {
   display: flex;
   justify-content: center;
-  margin-top: 12rem;
+  margin: 2rem 5rem;
+  text-align: center;
+  color: $text-dark;
+  font-weight: bold;
 }
-#container {
+.container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem 0;
   user-select: none;
+  gap: 2rem;
 
   @media (min-width: 1300px) {
     margin: 1rem 0 6rem 0;
@@ -92,7 +98,7 @@ const projects = [
   }
 }
 
-#cardContainer {
+.cardContainer {
   height: 23rem;
   margin: 1rem;
   position: relative;
@@ -106,7 +112,7 @@ const projects = [
     margin: 2rem 3rem;
   }
 
-  #imgContainer {
+  .imgContainer {
     position: relative;
     height: 8rem;
     background: $secondary;
@@ -123,15 +129,15 @@ const projects = [
     }
   }
 
-  #infoContainer {
+  .infoContainer {
     position: relative;
-    height: 13rem;
+    height: 12rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 
-    #name {
+    .name {
       text-align: center;
       margin: 2rem 0 -1rem 0;
       color: $secondary;
@@ -139,7 +145,7 @@ const projects = [
       font-weight: bold;
     }
 
-    #text1 {
+    .text1 {
       margin: 0 0 0 0.5rem;
       color: $text-dark;
 
@@ -148,7 +154,7 @@ const projects = [
       }
     }
 
-    #text2 {
+    .text2 {
       text-align: end;
       margin: 0 0 1rem 0;
       color: $text-dark;
@@ -159,33 +165,32 @@ const projects = [
     }
   }
 
-  #techContainer {
-    height: 2rem;
+  .techContainer {
+    height: fit-content;
     width: 100%;
     position: absolute;
     background: $secondary;
     bottom: 0;
 
-    #text {
+    .text {
       display: flex;
       justify-content: space-between;
       margin: 0 1rem 0 1rem;
 
-      #tools {
+      .tools {
         display: flex;
+        flex-wrap: wrap;
         margin: 0.3rem 0.5rem 0.3rem 0;
 
-        div {
-          padding: 0 0.5rem 0 0.5rem;
-          margin: 0 0.5rem 0 0.5rem;
-          border: 1px solid $bg-dark;
+        .tool {
+          padding: 0.1rem 0.2rem;
         }
       }
 
-      #code {
+      .code {
         display: flex;
+        align-items: center;
         font-size: 1.3rem;
-        margin: 0.25rem 0 0 0;
 
         a {
           color: $bg-dark;
