@@ -1,14 +1,18 @@
 <script setup lang="ts">
 const route = ref('')
 const path = computed(() => {
-  console.log(useRoute().fullPath)
   return route.value = useRoute().fullPath
 })
+
+const navOpen = ref(false)
 </script>
 
 <template>
   <div class="viewport" ref="viewport">
-    <div class="moonwitch-container" v-if="path != '/artist' && path != '/artist/'">
+    <div class="nav-toggle" :class="{ open: navOpen }">
+      <img src="/moon.png" @click="navOpen = !navOpen"/>
+    </div>
+    <div class="moonwitch-container" :class="{ open: navOpen }" v-if="path != '/artist' && path != '/artist/'">
       <div class="logo-container">
         <NuxtLink to="/">
           <img
@@ -30,8 +34,45 @@ const path = computed(() => {
   width: 100vw;
   min-height: 100dvh;
 
-  .moonwitch-container {
-    width: 100%;
+  .nav-toggle {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    .nav-toggle {
+      display: block;
+      position: absolute;
+      top: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      width: 3rem;
+      height: 3rem;
+      transition: 0.2s ease-in-out;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    .open {
+      &.nav-toggle {
+        left: 0.5rem;
+        transform: rotate(90deg);
+      }
+
+      &.moonwitch-container {
+        transform: translateY(0);
+        opacity: 100%;
+      }
+    }
+
+    .moonwitch-container {
+      transform: translateY(-10rem);
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
   }
 
   .logo-container {
@@ -49,21 +90,23 @@ const path = computed(() => {
       height: 7rem;
     }
 
-    &:hover {
-      a .moonwitch-logo-sm {
-        top: 1.5rem;
-        left: 5rem;
-        transform: none;
+    @media (min-width: 1024px) {
+      &:hover {
+        a .moonwitch-logo-sm {
+          top: 1.5rem;
+          left: 5rem;
+          transform: none;
+        }
+
+        .artist-nav {
+          opacity: 100%;
+          transition: 0.4s ease-in-out;
+        }
       }
 
       .artist-nav {
-        opacity: 100%;
-        transition: 0.4s ease-in-out;
+        opacity: 0;
       }
-    }
-
-    .artist-nav {
-      opacity: 0;
     }
 
     a {

@@ -463,11 +463,13 @@ function animatePaths(): void {
         width: calc(30dvw - 7rem);
       }
 
-      @media(min-width: 1024px) {
-        color: white;
-        gap: 1rem;
-        transition: 0.2s ease;
-        cursor: pointer;
+      &:hover {
+        @media(min-width: 1024px) {
+          color: white;
+          gap: 1rem;
+          transition: 0.2s ease;
+          cursor: pointer;
+        }
       }
     }
   }
