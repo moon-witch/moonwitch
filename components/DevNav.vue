@@ -11,8 +11,7 @@ const path = computed(() => {
 })
 
 const windowWidth = computed(() => {
-  const { width, height } = useWindowSize()
-  console.log(width.value)
+  const { width } = useWindowSize()
   return width.value
 })
 </script>
@@ -22,7 +21,7 @@ const windowWidth = computed(() => {
     <ul :class="{ isHome: path === '/dev/'}">
       <li>
         <NuxtLink class="link bio" to="/dev/bio">
-          <div v-if="windowWidth > 800">
+          <div v-if="windowWidth > 800 || path === '/dev/'">
             about
           </div>
           <div v-else >
@@ -32,7 +31,7 @@ const windowWidth = computed(() => {
       </li>
       <li>
         <NuxtLink class="link projects" to="/dev/projects">
-          <div v-if="windowWidth > 800">
+          <div v-if="windowWidth > 800 || path === '/dev/'">
             projects
           </div>
           <div v-else >
@@ -43,7 +42,7 @@ const windowWidth = computed(() => {
       </li>
       <li>
         <NuxtLink class="link tools" to="/dev/tools">
-          <div v-if="windowWidth > 800">
+          <div v-if="windowWidth > 800 || path === '/dev/'">
             tools
           </div>
           <div v-else >
@@ -53,7 +52,7 @@ const windowWidth = computed(() => {
       </li>
       <li>
         <NuxtLink class="link contact" to="/dev/contact">
-          <div v-if="windowWidth > 800">
+          <div v-if="windowWidth > 800 || path === '/dev/'">
             contact
           </div>
           <div v-else >
@@ -74,7 +73,7 @@ const windowWidth = computed(() => {
   position: fixed;
   z-index: 5;
   box-shadow: 0 3px 3px 0 $bg-dark;
-  top: 3rem;
+  top: 4rem;
   width: 100dvw;
   background: $bg-dark;
 
@@ -97,7 +96,7 @@ const windowWidth = computed(() => {
 
     &.isHome {
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
 
       @media (min-width: 1024px) {
         flex-direction: row;

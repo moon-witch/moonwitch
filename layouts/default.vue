@@ -62,7 +62,7 @@ onBeforeUnmount(() => {
   .logo-container {
     position: fixed;
     width: 100dvw;
-    height: 3rem;
+    height: 3.5rem;
     z-index: 5;
     transition: all 0.2s ease-out;
     display: flex;
@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
 
       .moonwitch-logo-sm {
         position: absolute;
-        top: 1.5rem;
+        top: 0.5rem;
         width: 14%;
         left: 50%;
         transform: translateX(-50%);
@@ -105,7 +105,8 @@ onBeforeUnmount(() => {
 
         @media (min-width: 1024px) {
           width: 60px;
-          left: 7rem;
+          top: 1.5rem;
+          left: 5rem;
           transform: none;
         }
       }

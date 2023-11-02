@@ -5,25 +5,25 @@ useHead({
 </script>
 
 <template>
-  <div id="bioContainer">
-    <div id="headContainer">
-      <img src="/profilepicsmol.jpg" id="imageOfMe" alt="image of moonwitch" />
-      <span id="nameTag">JOSHUA LANGENBACH</span>
-      <div id="backgroundElement"></div>
+  <div class="bioContainer">
+    <div class="headContainer">
+      <img src="/profilepicsmol.jpg" class="imageOfMe" alt="image of moonwitch" />
+      <span class="nameTag">JOSHUA LANGENBACH</span>
+      <div class="backgroundElement"></div>
     </div>
 
-    <div id="bodyContainer">
-      <div id="slogan1">
+    <div class="bodyContainer">
+      <div class="slogan1">
         I enjoy working creatively and exploring new possibilities.
       </div>
-      <div id="slogan2">
+      <div class="slogan2">
         Every project is unique, every element placed with purpose.
       </div>
-      <h1 id="slogan3">Consciously designed to bring joy.</h1>
+      <h1 class="slogan3">Consciously designed to bring joy.</h1>
     </div>
 
-    <div id="skillContainer">
-      <div id="skillsHead">I create your website for</div>
+    <div class="skillContainer">
+      <div class="skillsHead">I create your website for</div>
       <ul>
         <li>your art</li>
         <li>your non-profit</li>
@@ -34,12 +34,12 @@ useHead({
           ...and anything else you'd like to see as a website.
         </li>
       </ul>
-      <div id="contact"><NuxtLink to="contact">contact me</NuxtLink></div>
+      <div class="contact"><NuxtLink to="contact">contact me</NuxtLink></div>
     </div>
 
-    <div id="interestTopic">
-      <div id="interestContainer">
-        <div id="interestsHead">Personally, I am very interested in</div>
+    <div class="interestTopic">
+      <div class="interestContainer">
+        <div class="interestsHead">Personally, I am very interested in</div>
         <ul>
           <li>responsible use of technology</li>
           <li>the more we create, the more we have to understand</li>
@@ -56,8 +56,8 @@ useHead({
         </ul>
       </div>
 
-      <div id="topicsContainer">
-        <div id="topicsHead">My favorite topics to chat about are</div>
+      <div class="topicsContainer">
+        <div class="topicsHead">My favorite topics to chat about are</div>
         <ul>
           <li>
             art(ifical intelligence)
@@ -85,7 +85,7 @@ useHead({
 </template>
 
 <style scoped lang="scss">
-#bioContainer {
+.bioContainer {
   margin: 9rem 1rem;
   overflow-x: hidden;
   user-select: none;
@@ -94,9 +94,14 @@ useHead({
     margin: 18rem 3rem 5rem 3rem;
     padding-bottom: 9rem;
   }
+
+  @media (min-width: 1024px) {
+    margin: 9rem 3rem 5rem 3rem;
+    padding-bottom: 9rem;
+  }
 }
 
-#headContainer {
+.headContainer {
   position: relative;
   margin: auto;
   left: 0;
@@ -119,7 +124,7 @@ useHead({
     margin: 3rem 0 0 0;
   }
 
-  #imageOfMe {
+  .imageOfMe {
     height: 8rem;
     border-radius: 100px;
     margin: 1rem;
@@ -131,7 +136,7 @@ useHead({
     }
   }
 
-  #nameTag {
+  .nameTag {
     font-size: 1.5rem;
     z-index: 2;
     font-weight: bold;
@@ -141,7 +146,7 @@ useHead({
     }
   }
 
-  #backgroundElement {
+  .backgroundElement {
     position: absolute;
     height: 75px;
     background: $secondary;
@@ -155,17 +160,14 @@ useHead({
       width: 100vw;
     }
 
-    @media (min-width: 1300px) {
-      width: 60vw;
-      left: 0;
-      right: 0;
-      margin: auto;
+    @media (min-width: 1024px) {
+      width: 70vw;
       height: 90px;
     }
   }
 }
 
-#bodyContainer {
+.bodyContainer {
   margin-top: 1rem;
   padding: 1rem 0 1rem 0;
   color: $text-dark;
@@ -175,18 +177,18 @@ useHead({
     margin: 5rem 22rem;
   }
 
-  #slogan1 {
+  .slogan1 {
     margin-left: 0.5rem;
     font-size: 1.5rem;
   }
 
-  #slogan2 {
+  .slogan2 {
     text-align: end;
     margin: 1.5rem 1rem 0 0;
     font-size: 1.5rem;
   }
 
-  #slogan3 {
+  .slogan3 {
     text-align: center;
     margin-top: 3rem;
     font-size: 1.1rem;
@@ -194,7 +196,7 @@ useHead({
   }
 }
 
-#skillContainer {
+.skillContainer {
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
@@ -203,10 +205,10 @@ useHead({
 
   @media (min-width: 1300px) {
     padding: 1rem 5rem;
-    margin: 5rem 22rem;
+    margin: 5rem 30rem;
   }
 
-  #skillsHead {
+  .skillsHead {
     font-size: 1.4rem;
     text-align: center;
   }
@@ -233,10 +235,6 @@ useHead({
       @media (min-width: 740px) {
         margin: 0.5rem 0 0.5rem 16rem;
       }
-
-      @media (min-width: 1300px) {
-        margin: 0.5rem 0 0.5rem 16rem;
-      }
     }
 
     li:nth-of-type(even):not(.long) {
@@ -249,7 +247,7 @@ useHead({
       }
 
       @media (min-width: 1300px) {
-        margin: 0.5rem 0 0.5rem 7rem;
+        margin: 0.5rem 0 0.5rem 12rem;
       }
     }
 
@@ -258,7 +256,7 @@ useHead({
     }
   }
 
-  #contact {
+  .contact {
     transition: 0.2s ease;
     text-align: center;
     font-size: 1.5rem;
@@ -277,7 +275,7 @@ useHead({
   }
 }
 
-#interestTopic {
+.interestTopic {
   @media (min-width: 1024px) {
     display: flex;
     justify-content: center;
@@ -285,7 +283,7 @@ useHead({
   }
 }
 
-#interestContainer {
+.interestContainer {
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
@@ -296,7 +294,7 @@ useHead({
     width: 30vw;
   }
 
-  #interestsHead {
+  .interestsHead {
     font-size: 1.4rem;
     margin: 0 1rem 0 1rem;
     text-align: center;
@@ -326,7 +324,7 @@ useHead({
   }
 }
 
-#topicsContainer {
+.topicsContainer {
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
@@ -337,7 +335,7 @@ useHead({
     width: 30vw;
   }
 
-  #topicsHead {
+  .topicsHead {
     font-size: 1.4rem;
     margin: 0 1rem 0 1rem;
     text-align: center;

@@ -59,6 +59,10 @@
   flex-direction: column;
   padding: 11rem 1rem;
 
+  @media (min-width: 1024px) {
+    padding: 11rem 35rem;
+  }
+
   .bold {
     font-weight: bold;
   }

@@ -435,10 +435,12 @@ function animatePaths(): void {
       }
 
       &:hover {
-        color: white;
-        gap: 1rem;
-        transition: 0.2s ease;
-        cursor: pointer;
+        @media(min-width: 1024px) {
+          color: white;
+          gap: 1rem;
+          transition: 0.2s ease;
+          cursor: pointer;
+        }
       }
     }
 
@@ -461,7 +463,7 @@ function animatePaths(): void {
         width: calc(30dvw - 7rem);
       }
 
-      &:hover {
+      @media(min-width: 1024px) {
         color: white;
         gap: 1rem;
         transition: 0.2s ease;

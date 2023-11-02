@@ -361,8 +361,7 @@ function animatePaths(): void {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16rem 0 0 0;
-  height: 50vh;
+  padding: 20rem 0 0 0;
   overflow: hidden;
   background: $bg-dark;
 
@@ -371,12 +370,12 @@ function animatePaths(): void {
   }
 
   @media (min-width: 1024px) {
-    padding: 15rem 0;
+    padding: 8rem 0;
   }
 }
 
 .sol {
-  width: 20rem;
+  width: 15rem;
   padding: 1rem;
   transform: rotateX(180deg);
 
@@ -385,7 +384,7 @@ function animatePaths(): void {
   }
 
   @media (min-width: 1024px) {
-    width: 40rem;
+    width: 35rem;
   }
 }
 

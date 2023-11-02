@@ -27,6 +27,10 @@
   .header {
     font-size: 30px;
     font-weight: bold;
+
+    @media (min-width: 1024px) {
+      font-size: 50px;
+    }
   }
 
   .legal {
@@ -35,6 +39,10 @@
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+
+    @media (min-width: 1024px) {
+      font-size: 30px;
+    }
 
     .email {
       margin-top: 0.5rem;

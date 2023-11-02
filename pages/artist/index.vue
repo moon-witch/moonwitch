@@ -111,6 +111,10 @@ definePageMeta({
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
 
+      @media(max-width: 1024px) {
+        display: none;
+      }
+
       img {
         opacity: 0;
         filter: invert(47%) sepia(0%) saturate(91%) hue-rotate(178deg) brightness(102%) contrast(101%);
