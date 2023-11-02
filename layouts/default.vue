@@ -62,7 +62,7 @@ onBeforeUnmount(() => {
   .logo-container {
     position: fixed;
     width: 100dvw;
-    height: 3.5rem;
+    height: 4rem;
     z-index: 5;
     transition: all 0.2s ease-out;
     display: flex;

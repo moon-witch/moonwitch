@@ -37,8 +37,7 @@
   align-content: center;
   width: 100vw;
   font-size: 25px;
-  position: absolute;
-  bottom: 0;
+  margin-top: 3rem;
 
   .copyright {
     display: flex;

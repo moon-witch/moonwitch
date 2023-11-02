@@ -1,18 +1,27 @@
 <script setup lang="ts">
+import {onClickOutside} from "@vueuse/core";
+
 const route = ref('')
 const path = computed(() => {
   return route.value = useRoute().fullPath
 })
 
 const navOpen = ref(false)
+const nav = ref(null)
+
+onClickOutside(nav, () => navOpen.value = false)
+
+watch(path, () => {
+  navOpen.value = false
+})
 </script>
 
 <template>
   <div class="viewport" ref="viewport">
-    <div class="nav-toggle" :class="{ open: navOpen }">
-      <img src="/moon.png" @click="navOpen = !navOpen"/>
+    <div class="nav-toggle" :class="{ open: navOpen }" v-if="path != '/artist' && path != '/artist/'">
+      <img src="/moon.png" @click="navOpen = !navOpen" alt="moon"/>
     </div>
-    <div class="moonwitch-container" :class="{ open: navOpen }" v-if="path != '/artist' && path != '/artist/'">
+    <div ref="nav" class="moonwitch-container" :class="{ open: navOpen }" v-if="path != '/artist' && path != '/artist/'">
       <div class="logo-container">
         <NuxtLink to="/">
           <img
@@ -31,7 +40,7 @@ const navOpen = ref(false)
 
 <style scoped lang="scss">
 .viewport {
-  width: 100vw;
+  width: 100dvw;
   min-height: 100dvh;
 
   .nav-toggle {
