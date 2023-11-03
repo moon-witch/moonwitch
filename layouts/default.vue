@@ -78,7 +78,7 @@ onBeforeUnmount(() => {
       transform: translateY(-64px);
 
       @media (min-width: 710px) {
-        transform: translateY(-90px)
+        transform: translateY(-120px)
       }
     }
 

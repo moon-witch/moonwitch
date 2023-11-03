@@ -67,8 +67,7 @@ watch(path, () => {
 
     .open {
       &.nav-toggle {
-        left: 0.5rem;
-        transform: rotate(90deg);
+        display: none;
       }
 
       &.moonwitch-container {

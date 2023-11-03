@@ -20,6 +20,9 @@ onClickOutside(banner, () => {
   <div class="cookie-container">
     <div ref="banner" class="banner" :class="{outsideClicked: outsideClicked}">
       this website uses cookies to display some of its content.
+      <div class="content">
+        Affected content: Soundcloud Embed
+      </div>
       <div class="buttons">
         <button class="button" @click="emit('accepted')">accept</button>
         <button class="button" @click="emit('declined')">decline</button>
@@ -42,14 +45,33 @@ onClickOutside(banner, () => {
     bottom:0.5rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 25%;
+    width: 80%;
     z-index: 100 !important;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
     color: $secondary;
     background: black;
     padding: 1rem;
-    border-radius: 50px;
+    border-radius: 5px;
+
+    @media (min-width: 710px) {
+      width: 50%;
+      font-size: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 25%;
+      font-size: 25px;
+    }
+
+    .content {
+      font-size: 12px;
+      margin-top: 0.3rem;
+
+      @media (min-width: 710px) {
+        font-size: 15px;
+      }
+    }
 
     &.outsideClicked {
       animation: bounce 1s;
@@ -58,10 +80,14 @@ onClickOutside(banner, () => {
     .buttons .button {
       margin: 1rem;
       padding: 0.5rem 1rem;
-      font-size: 20px;
+      font-size: 15px;
       background: transparent;
       border: none;
       color: $a-sun;
+
+      @media (min-width: 710px) {
+        font-size: 20px;
+      }
 
       &:hover {
         color: $text-dark;
