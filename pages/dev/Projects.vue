@@ -74,7 +74,7 @@ const projects = [
 
 <style scoped lang="scss">
 .project-container {
-  margin: 9rem 0 7rem 0;
+  margin: 9rem 0 3rem 0;
   overflow-x: hidden;
 }
 .notice {

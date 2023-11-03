@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     'unplugin-icons/nuxt',
+    '@dargmuesli/nuxt-cookie-control'
   ],
   app: {
     pageTransition: {name: 'page', mode: 'out-in'},

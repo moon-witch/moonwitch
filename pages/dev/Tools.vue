@@ -110,8 +110,7 @@ const tools = {
 }
 
 #mainContainer {
-  margin: 7rem 0 4rem 0;
-  padding-bottom: 7rem;
+  margin: 7rem 0 3rem 0;
   user-select: none;
 
   @media (min-width: 1300px) {

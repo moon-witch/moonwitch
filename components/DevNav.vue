@@ -123,6 +123,8 @@ const windowWidth = computed(() => {
         text-decoration: none;
         text-transform: uppercase;
         font-size: 30px;
+        letter-spacing: 0.05rem;
+        transition: 0.3s ease-in-out;
 
         @media (min-width: 710px) {
           font-size: 50px;

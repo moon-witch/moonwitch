@@ -370,7 +370,7 @@ function animatePaths(): void {
   }
 
   @media (min-width: 1024px) {
-    padding: 8rem 0;
+    padding: 8rem 0 3rem 0;
   }
 }
 

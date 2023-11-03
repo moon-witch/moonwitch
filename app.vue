@@ -2,14 +2,26 @@
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+const cookieState = useState('cookies', (): boolean | null => null)
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+function acceptCookies() {
+  cookieState.value = true
+  console.log('accept', cookieState.value)
+}
+
+function declineCookies() {
+  cookieState.value = false;
+  console.log('decline', cookieState.value)
+}
 </script>
 
 <template>
   <div>
     <NuxtLayout>
-        <NuxtPage/>
+      <NuxtPage/>
+      <CookieBanner @accepted="acceptCookies" @declined="declineCookies" :class="{hide: cookieState != null}"/>
     </NuxtLayout>
   </div>
 </template>
@@ -22,6 +34,10 @@ html, body {
   max-width: 1920px;
   font-family: $font-text, serif;
   background-color: black;
+}
+
+.hide {
+  display: none;
 }
 
 /* width */
@@ -48,6 +64,7 @@ html, body {
 .page-leave-active {
   transition: all 0.2s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;

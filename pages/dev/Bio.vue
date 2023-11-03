@@ -86,7 +86,7 @@ useHead({
 
 <style scoped lang="scss">
 .bioContainer {
-  margin: 9rem 1rem;
+  margin: 9rem 1rem 3rem 1rem;
   overflow-x: hidden;
   user-select: none;
 
@@ -97,7 +97,7 @@ useHead({
 
   @media (min-width: 1024px) {
     margin: 9rem 3rem 5rem 3rem;
-    padding-bottom: 9rem;
+    padding-bottom: 3rem;
   }
 }
 
