@@ -107,16 +107,11 @@ useHead({
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
   @media (min-width: 710px) {
     padding: 0 5rem 0 5rem;
-  }
-
-  @media (min-width: 1300px) {
-    padding: 0 38rem;
-    margin: 3rem 0 0 0;
   }
 
   @media (min-width: 3000px) {
@@ -131,7 +126,7 @@ useHead({
     z-index: 2;
     box-shadow: 0 0 6px 6px $bg-dark;
 
-    @media (min-width: 1300px) {
+    @media (min-width: 1024px) {
       height: 11rem;
     }
   }
@@ -141,7 +136,7 @@ useHead({
     z-index: 2;
     font-weight: bold;
 
-    @media (min-width: 1300px) {
+    @media (min-width: 1024px) {
       font-size: 2rem;
     }
   }
@@ -203,8 +198,17 @@ useHead({
   color: $text-dark;
   border-radius: 50px 50px 0 0;
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1024px) {
     padding: 1rem 5rem;
+    margin: 5rem 15rem;
+  }
+
+  @media (min-width: 1400px) {
+    padding: 1rem 5rem;
+    margin: 5rem 25rem;
+  }
+
+  @media (min-width: 3000px) {
     margin: 5rem 30rem;
   }
 
@@ -220,7 +224,7 @@ useHead({
       margin: 0.5rem 0 0.2rem 0;
       line-height: 1.6rem;
       padding: 0.5rem 2rem 0.5rem 2rem;
-      font-weight: bold;
+      font-weight: bolder;
     }
 
     li:not(.long) {
@@ -343,9 +347,10 @@ useHead({
 
   ul {
     list-style: none;
+    margin: 0 0 0 2rem;
 
     @media (min-width: 1024px) {
-      margin: 2rem 0 0 0;
+      margin: 2rem 0 0 2rem;
     }
 
     li {

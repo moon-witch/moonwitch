@@ -9,7 +9,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@dargmuesli/nuxt-cookie-control": "^7.1.1",
     "@iconify/json": "^2.2.134",
     "@types/node": "^18",
     "gsap": "^3.11.5",

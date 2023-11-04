@@ -8,12 +8,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 function acceptCookies() {
   cookieState.value = true
-  console.log('accept', cookieState.value)
 }
 
 function declineCookies() {
   cookieState.value = false;
-  console.log('decline', cookieState.value)
 }
 </script>
 

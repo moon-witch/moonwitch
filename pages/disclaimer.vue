@@ -60,7 +60,7 @@
   padding: 11rem 1rem;
 
   @media (min-width: 1024px) {
-    padding: 11rem 35rem;
+    padding: 11rem 30rem 0 30rem;
   }
 
   .bold {

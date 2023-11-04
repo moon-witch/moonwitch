@@ -7,6 +7,7 @@ definePageMeta({
 <template>
   <div class="main-container">
     visual
+    <div style="font-size: 25px">there's nothing here yet, come back later!</div>
     <NuxtLink to="/artist">
       back
     </NuxtLink>

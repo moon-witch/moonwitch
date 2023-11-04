@@ -79,7 +79,7 @@ onClickOutside(banner, () => {
 
     .buttons .button {
       margin: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 0 1rem;
       font-size: 15px;
       background: transparent;
       border: none;
