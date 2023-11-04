@@ -9,8 +9,8 @@
 
 <style scoped lang="scss">
 .wrap {
-  position: fixed;
-  bottom: 5rem;
+  position: absolute;
+  bottom: 1rem;
   right: 2rem;
   height: 3rem;
   width: 7rem;

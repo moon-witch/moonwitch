@@ -1,8 +1,21 @@
-$primary: #B4C292;
-$secondary: #E8F5C7;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+// dev
+$primary: #EBEBEB;
+$secondary: #6f6866;
 
-$bg-bright: #B4C292;
-$bg-dark: #393530;
+$bg-bright: $primary;
+$bg-dark: black;
+
+$text-bright: $bg-dark;
+$text-dark: $bg-bright;
+$text-alt: #090B09;
+
+$font-header: "moonless_scregular";
+$font-text: "quicksandregular";
 
 $btn-bright: $bg-dark;
 $btn-dark: $bg-bright;
@@ -15,6 +28,25 @@ $btn-letter-space: 2%;
 $border-bright: $primary;
 $border-dark: $secondary;
 
+// artist
+$a-primary: black;
+$a-secondary: rgba(10, 10, 10, 0.55);
+$a-sun: #7A7A7A;
+
+$a-bg-bright: $primary;
+$a-bg-dark: black;
+
+$a-text-bright: $bg-dark;
+$a-text-dark: #EBEBEB;
+$a-text-alt: #8A02F2;
+
+$a-font-header: "moonless_scregular";
+$a-font-text: "quicksandregular";
+
+$btn-bright: $bg-dark;
+$btn-dark: $bg-bright;
+
+//general
 $letter-space-xl: 0%;
 $letter-space-lg: 1%;
 $letter-space-md: 2%;

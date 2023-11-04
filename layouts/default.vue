@@ -1,124 +1,115 @@
 <script setup lang="ts">
+import DevNav from "~/components/DevNav.vue";
+
 let currentPath = useRoute();
+
+const viewport = ref(null);
+const isLogoHidden = ref(false);
+let prevScrollPos = ref(0);
+
+const handleScroll = () => {
+  const currentScrollPos = window.scrollY;
+
+  if (currentScrollPos > prevScrollPos.value) {
+    isLogoHidden.value = true;
+  } else {
+    isLogoHidden.value = false;
+  }
+
+  prevScrollPos.value = currentScrollPos;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <div id="viewport">
-    <Nav />
-    <div id="moonwitch-container">
-      <div id="logo-container">
-        <img
-          v-if="currentPath.path === '/'"
-          id="moonwitch-logo"
-          src="/moonwitch2.png"
-          alt="logo of moonwitch"
-        />
-        <div v-else id="smallLogoContainer">
+  <div class="viewport" ref="viewport">
+    <div class="moonwitch-container">
+        <div class="logo-container" :class="{ hide: isLogoHidden }">
           <NuxtLink to="/">
             <img
-            id="moonwitch-logo-sm"
-            src="/moonwitch2.png"
-            alt="logo of moonwitch"
-          />
+              class="moonwitch-logo-sm"
+              src="/moonwitch2.png"
+              alt="logo of moonwitch"
+            />
           </NuxtLink>
+          <DevNav />
         </div>
-      </div>
-      <h1 v-if="currentPath.path === '/'" id="moonwitch-name" class="font-alt">
-        moonwitch
-        <div id="tagline">creative web developer</div>
-      </h1>
     </div>
     <slot />
-    <MoonwitchGlitch v-if="currentPath.path != '/'"/>
+    <MoonwitchGlitch v-if="currentPath.path != '/'" />
     <Footer />
   </div>
 </template>
 
 <style scoped lang="scss">
-#viewport {
+.viewport {
   position: absolute;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: $bg-dark;
-}
 
-#moonwitch-container {
-  width: 100%;
-}
-
-#moonwitch-name {
-  text-align: center;
-  color: $bg-dark;
-  padding: $spacing-sm;
-  margin-top: 1rem;
-  font-size: $text-lg;
-  font-family: "Sono";
-  font-weight: 400;
-  background: $primary;
-
-  @media (min-width: 1300px) {
-    font-size: 2.5rem;
-  }
-}
-
-#tagline {
-  font-size: $text-sm;
-  color: $bg-dark;
-  line-height: 30px;
-  margin: 9px 0 0 0;
-
-  @media (min-width: 1300px) {
-    font-size: 1.5rem;
-  }
-}
-
-#logo-container {
-  background: $primary;
-}
-
-#moonwitch-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-
-  @media (min-width: 710px) {
-    width: 20%;
+  .moonwitch-container {
+    width: 100%;
   }
 
-  @media (min-width: 1024px) {
-    width: 7%;
-  }
-}
-
-#smallLogoContainer {
-  position: fixed;
-  background: $bg-bright;
-  width: 100vw;
-  height: 95px;
-  z-index: 5;
-  box-shadow: 0 0 3px 3px $bg-dark;
-
-  @media (min-width: 1024px) {
-    height: 60px;
-  }
-
-  #moonwitch-logo-sm {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    margin: auto;
-    width: 23%;
+  .logo-container {
+    position: fixed;
+    width: 100dvw;
+    height: 4rem;
+    z-index: 5;
+    transition: all 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-dark;
 
     @media (min-width: 710px) {
-      width: 12%;
+      height: 7rem;
     }
 
-    @media (min-width: 1024px) {
-      width: 60px;
+    &.hide {
+      transform: translateY(-64px);
+
+      @media (min-width: 710px) {
+        transform: translateY(-120px)
+      }
+    }
+
+    a {
+      width: 20dvw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media(min-width: 1024px) {
+        justify-content: flex-start;
+      }
+
+      .moonwitch-logo-sm {
+        position: absolute;
+        top: 0.5rem;
+        width: 14%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (min-width: 710px) {
+          width: 12%;
+        }
+
+        @media (min-width: 1024px) {
+          width: 60px;
+          top: 1.5rem;
+          left: 5rem;
+          transform: none;
+        }
+      }
     }
   }
 }

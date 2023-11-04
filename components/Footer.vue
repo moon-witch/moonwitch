@@ -1,96 +1,116 @@
 <template>
   <div id="footer">
-    <div class="container">
-      <span class="link-text">built with:</span>
-      <a
-        id="nuxt"
-        class="link-logo"
-        href="https://nuxt.com"
-        target="_blank"
-        rel="noopener"
-      >
-        <img id="nuxt" src="/icon-black.svg" alt="nuxt" />
-      </a>
-      <a
-        class="link-logo"
-        href="https://greensock.com/gsap/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img
-          id="gsap"
-          src="/greensock-gsap-icon-seeklogo.com.svg"
-          alt="gsap"
-        />
-      </a>
+    <div class="links">
+      <div class="container">
+        <a
+            class="link-logo"
+            href="https://github.com/moon-witch"
+            target="_blank"
+            rel="noopener"
+        >
+          <img id="github" src="/github-mark-white.png" alt="github" />
+        </a>
+        <div class="legal-name third">moonwitch © 2023</div>
+        <a
+            class="link-logo"
+            href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
+            target="_blank"
+            rel="noopener"
+        >
+          <img id="linkedin" src="/In-White-26.png" alt="linkedin" />
+        </a>
+      </div>
     </div>
-    <div class="container text-line">moonwitch © 2023</div>
-    <div class="container">
-      <span class="link-text">find me on:</span>
-      <a
-        class="link-logo"
-        href="https://github.com/moon-witch"
-        target="_blank"
-        rel="noopener"
-      >
-        <img id="github" src="/github-mark-white.png" alt="github" />
-      </a>
-      <a
-        class="link-logo"
-        href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
-        target="_blank"
-        rel="noopener"
-      >
-        <img id="linkedin" src="/In-White-26.png" alt="linkedin" />
-      </a>
+    <div class="copyright">
+      <NuxtLink to="/imprint" class="legal-link third">imprint</NuxtLink>
+      <NuxtLink to="/disclaimer" class="legal-link third">disclaimer</NuxtLink>
     </div>
-  </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
 #footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background: $bg-bright;
-  color: $bg-dark;
+  color: $a-text-dark;
   display: flex;
-  justify-content: space-between;
-  height: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
   width: 100vw;
+  font-size: 25px;
+  margin-top: 3rem;
+
+  .copyright {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.75rem 0;
+
+    .legal-link {
+      font-size: 12px;
+      color: $text-dark;
+      text-decoration: none;
+
+      @media (min-width: 710px) {
+        font-size: 25px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:visited {
+        color: $text-dark;
+      }
+    }
+
+    .third {
+      width: 33.3%;
+      text-align: center;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: $font-header, serif;
+  gap: 2rem;
   
   @media (min-width: 740px) {
     padding: 0 2rem 0 2rem;
   }
-}
 
-#nuxt {
-  width: 2rem;
-}
+  .legal-name {
+    font-size: 19px;
 
-#gsap {
-  width: 2rem;
+    @media (min-width: 710px) {
+      font-size: 35px;
+    }
+  }
 }
 
 #github {
-  width: 2rem;
-  filter: invert(29%) sepia(0%) saturate(6133%) hue-rotate(343deg) brightness(34%) contrast(90%);
+  width: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
+
+  @media (min-width: 710px) {
+    width: 2.5rem;
+  }
 }
 
 #linkedin {
-  width: 2rem;
-  filter: invert(29%) sepia(0%) saturate(6133%) hue-rotate(343deg) brightness(34%) contrast(90%);
-}
+  width: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(8%) hue-rotate(152deg) brightness(98%) contrast(81%);
 
-.text-line {
-  text-align: center;
-  font-size: calc($text-sm  * 0.7 );
+  @media (min-width: 710px) {
+    width: 2.5rem;
+  }
 }
 
 .link-text {
@@ -114,4 +134,5 @@
 }
 </style>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>

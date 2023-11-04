@@ -21,48 +21,53 @@ async function submit(form: Object) {
 </script>
 
 <template>
-  <div id="mainContainer">
-    <div id="mainText">
-      <div id="first">you can contact me through LinkedIn or just drop me a mail.</div>
+  <div class="mainContainer">
+    <div class="mainText">
+      <div class="first">you can contact me through LinkedIn or just drop me a mail.</div>
       <div>
         make sure to include as much info as possible about your desired
         project.
       </div>
       <div>i'm looking forward to hear from you!</div>
     </div>
-    <div id="linkContainer">
+    <div class="linkContainer">
       <a
-        id="liLogo"
+        class="liLogo"
         href="https://de.linkedin.com/in/joshua-langenbach-873a19252/en"
         target="_blank"
         rel="noopener"
-        ><img id="linkedin" src="/In-White-26.png" alt="linkedin" />
+        ><img class="linkedin" src="/In-White-26.png" alt="linkedin" />
       </a>
-      <div id="mail">joshua_develops@proton.me</div>
+      <div class="mail">joshua_develops@proton.me</div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-#mainContainer {
-  margin: 9rem 1rem 4rem 1rem;
+.mainContainer {
+  margin: 11rem 1rem 3rem 1rem;
+
+  @media (min-width: 710px) {
+    margin: 28rem 1rem 4rem 1rem;
+  }
 
   @media (min-width: 1400px) {
     margin: 22rem 1rem 4rem 1rem;
   }
 
-  #title {
+  .title {
     text-align: center;
     font-size: 1.5rem;
   }
 
-  #mainText {
+  .mainText {
     text-align: center;
     margin: 2rem 0 0 0;
     user-select: none;
-    color: $secondary;
+    color: $text-dark;
+    font-weight: bold;
 
-    #first {
+    .first {
       margin-bottom: 2rem;
       font-size: 1.5rem;
     }
@@ -77,10 +82,11 @@ async function submit(form: Object) {
     }
   }
 
-  #linkContainer {
+  .linkContainer {
     margin: 1rem 1rem 0 1rem;
     padding: 1rem 0 1rem 1rem;
     font-size: 1.1rem;
+    font-weight: bold;
     background: $secondary;
     display: flex;
     flex-direction: column;

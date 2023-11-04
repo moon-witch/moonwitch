@@ -1,22 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: [
+    'unplugin-icons/nuxt'
+  ],
   app: {
+    pageTransition: {name: 'page', mode: 'out-in'},
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       title: "moonwitch",
       link: [
-        { rel: "icon", type: "image/png", href: "/moon.png" },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400&family=Splash&display=swap",
-        },
+        { rel: "icon", type: "image/png", href: "/moon.png" }
       ],
       meta: [
         {

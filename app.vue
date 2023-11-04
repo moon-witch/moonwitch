@@ -1,15 +1,25 @@
 <script setup lang="ts">
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+const cookieState = useState('cookies', (): boolean | null => null)
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+function acceptCookies() {
+  cookieState.value = true
+}
+
+function declineCookies() {
+  cookieState.value = false;
+}
 </script>
 
 <template>
   <div>
-    <NuxtLayout >
-      <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage/>
+      <CookieBanner @accepted="acceptCookies" @declined="declineCookies" :class="{hide: cookieState != null}"/>
     </NuxtLayout>
   </div>
 </template>
@@ -18,13 +28,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Sono", sans-serif;
   overflow-x: hidden;
   max-width: 1920px;
+  font-family: $font-text, serif;
+  background-color: black;
 }
 
-.font-splash {
-  font-family: "Splash", cursive;
+.hide {
+  display: none;
 }
 
 /* width */
@@ -45,5 +56,15 @@ html, body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $secondary;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 </style>

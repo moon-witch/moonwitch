@@ -18,10 +18,10 @@ const tools = {
       alt: "nuxt website",
     },
     {
-      name: "flutter",
-      text: "for cross-platform mobile apps",
-      link: "https://flutter.dev",
-      alt: "flutter website",
+      name: "nest js",
+      text: "for performant backend developement",
+      link: "https://nestjs.com",
+      alt: "nest js website",
     },
   ],
   libraries: [
@@ -39,18 +39,12 @@ const tools = {
     },
     {
       name: "three js",
-      text: "whenever i want to create 3d objects or animations with webgl to simplify the webgl workflow. also to import blender models to the browser and manipulate them further.",
+      text: "whenever i want to create 3d objects or animations with webgl to simplify the webgl workflow. also to import 3d models to the browser and manipulate them further.",
       link: "https://threejs.org",
       alt: "threejs website",
     },
   ],
   software: [
-    {
-      name: "blender",
-      text: "to create complex and quality 3d models and particles.",
-      link: "https://www.blender.org",
-      alt: "blender website",
-    },
     {
       name: "adobe illustrator",
       text: "for the creation of custom svgs.",
@@ -69,7 +63,6 @@ const tools = {
 
 <template>
   <div id="mainContainer">
-
     <div id="first" class="subHeader">frameworks</div>
     <div class="container">
       <div v-for="tool in tools.frameworks" class="toolContainer">
@@ -112,12 +105,12 @@ const tools = {
 .container {
   @media (min-width: 740px) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
 #mainContainer {
-  margin: 7rem 0 4rem 0;
+  margin: 7rem 0 3rem 0;
   user-select: none;
 
   @media (min-width: 1300px) {
@@ -125,14 +118,15 @@ const tools = {
   }
 
   #first {
-    margin-top: 12rem;
+    margin-top: 11rem;
   }
 
   .subHeader {
     margin: 3rem 0 1rem 0;
     font-size: 1.2rem;
     text-align: center;
-    color: $secondary;
+    color: $text-dark;
+    font-weight: bold;
 
     @media (min-width: 1024px) {
       font-size: 1.5rem;
