@@ -74,7 +74,7 @@ const projects = [
 
 <style scoped lang="scss">
 .project-container {
-  margin: 9rem 0 3rem 0;
+  margin: 11rem 0 3rem 0;
   overflow-x: hidden;
 }
 .notice {
@@ -102,6 +102,7 @@ const projects = [
   height: 23rem;
   margin: 1rem;
   position: relative;
+  border: 3px solid $secondary;
 
   @media (min-width: 740px) {
     width: 80vw;
@@ -124,7 +125,7 @@ const projects = [
       left: 0;
       margin: 0 auto;
       background: black;
-      border-radius: 0 0 50px 50px;
+      border-radius: 50px 50px 500px 500px;
       padding: 1rem;
     }
   }
@@ -136,6 +137,7 @@ const projects = [
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    padding: 0.5rem;
 
     .name {
       text-align: center;
@@ -156,7 +158,7 @@ const projects = [
 
     .text2 {
       text-align: end;
-      margin: 0 0 1rem 0;
+      margin: 0 1.5rem 1rem 0;
       color: $text-dark;
 
       @media (min-width: 1300px) {

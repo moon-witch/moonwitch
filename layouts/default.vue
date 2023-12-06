@@ -30,20 +30,22 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="viewport" ref="viewport">
-    <div class="moonwitch-container">
+    <div class="page-container">
+      <div class="moonwitch-container">
         <div class="logo-container" :class="{ hide: isLogoHidden }">
           <NuxtLink to="/">
             <img
-              class="moonwitch-logo-sm"
-              src="/moonwitch2.png"
-              alt="logo of moonwitch"
+                class="moonwitch-logo-sm"
+                src="/moonwitch2.png"
+                alt="logo of moonwitch"
             />
           </NuxtLink>
           <DevNav />
         </div>
+      </div>
+      <slot />
+      <MoonwitchGlitch v-if="currentPath.path != '/'" />
     </div>
-    <slot />
-    <MoonwitchGlitch v-if="currentPath.path != '/'" />
     <Footer />
   </div>
 </template>
@@ -55,12 +57,17 @@ onBeforeUnmount(() => {
   min-height: 100dvh;
   background: $bg-dark;
 
+  .page-container {
+    margin-bottom: 9rem;
+  }
+
   .moonwitch-container {
     width: 100%;
   }
 
   .logo-container {
     position: fixed;
+    top: 0;
     width: 100dvw;
     height: 4rem;
     z-index: 5;

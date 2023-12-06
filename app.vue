@@ -16,10 +16,9 @@ function declineCookies() {
 </script>
 
 <template>
-  <div>
+  <div class="app">
     <NuxtLayout>
       <NuxtPage/>
-      <CookieBanner @accepted="acceptCookies" @declined="declineCookies" :class="{hide: cookieState != null}"/>
     </NuxtLayout>
   </div>
 </template>
@@ -29,7 +28,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  max-width: 1920px;
   font-family: $font-text, serif;
   background-color: black;
 }

@@ -62,7 +62,7 @@ definePageMeta({
 .artist-container {
   background: black;
   height: calc(100dvh - 9rem);
-  padding: 6rem 0;
+  padding: 4rem 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;

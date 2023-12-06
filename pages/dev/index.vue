@@ -361,7 +361,7 @@ function animatePaths(): void {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20rem 0 0 0;
+  padding: 23rem 0 0 0;
   overflow: hidden;
   background: $bg-dark;
 
@@ -370,7 +370,7 @@ function animatePaths(): void {
   }
 
   @media (min-width: 1024px) {
-    padding: 8rem 0 3rem 0;
+    padding: 13rem 0 3rem 0;
   }
 }
 

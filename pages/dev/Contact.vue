@@ -45,7 +45,7 @@ async function submit(form: Object) {
 
 <style scoped lang="scss">
 .mainContainer {
-  margin: 11rem 1rem 3rem 1rem;
+  margin: 14rem 1rem 3rem 1rem;
 
   @media (min-width: 710px) {
     margin: 28rem 1rem 4rem 1rem;

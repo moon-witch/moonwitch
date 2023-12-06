@@ -169,24 +169,24 @@ useHead({
 
   @media (min-width: 1300px) {
     padding: 1rem;
-    margin: 5rem 22rem;
+    margin: 5rem 15rem;
   }
 
   .slogan1 {
     margin-left: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .slogan2 {
     text-align: end;
-    margin: 1.5rem 1rem 0 0;
-    font-size: 1.5rem;
+    margin: 3rem 1rem 0 0;
+    font-size: 2rem;
   }
 
   .slogan3 {
     text-align: center;
-    margin-top: 3rem;
-    font-size: 1.1rem;
+    margin-top: 9rem;
+    font-size: 2.5rem;
     font-weight: 400;
   }
 }
@@ -195,7 +195,6 @@ useHead({
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
-  color: $text-dark;
   border-radius: 50px 50px 0 0;
 
   @media (min-width: 1024px) {
@@ -213,18 +212,20 @@ useHead({
   }
 
   .skillsHead {
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   ul {
     list-style: none;
+    margin: 2rem 0;
 
     li {
-      margin: 0.5rem 0 0.2rem 0;
+      margin: 1rem 0 0.2rem 0;
       line-height: 1.6rem;
       padding: 0.5rem 2rem 0.5rem 2rem;
       font-weight: bolder;
+      font-size: 1.3rem;
     }
 
     li:not(.long) {
@@ -237,7 +238,7 @@ useHead({
       margin-left: 3rem;
 
       @media (min-width: 740px) {
-        margin: 0.5rem 0 0.5rem 16rem;
+        margin: 1rem 0 0.5rem 16rem;
       }
     }
 
@@ -247,11 +248,11 @@ useHead({
       color: $text-alt;
 
       @media (min-width: 740px) {
-        margin: 0.5rem 0 0.5rem 8rem;
+        margin: 1rem 0 0.5rem 8rem;
       }
 
       @media (min-width: 1300px) {
-        margin: 0.5rem 0 0.5rem 12rem;
+        margin: 1rem 0 0.5rem 12rem;
       }
     }
 
@@ -263,7 +264,7 @@ useHead({
   .contact {
     transition: 0.2s ease;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: $bg-dark;
     padding: 0.2rem 0 0.2rem 0;
 
@@ -291,7 +292,6 @@ useHead({
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
-  color: $text-dark;
 
   @media (min-width: 1024px) {
     padding: 1rem 5rem;
@@ -299,7 +299,7 @@ useHead({
   }
 
   .interestsHead {
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin: 0 1rem 0 1rem;
     text-align: center;
   }
@@ -315,13 +315,15 @@ useHead({
 
       @media (min-width: 1024px) {
         margin-left: -2rem;
-        font-size: 1.3rem;
+        margin-bottom: -0.5rem;
+        font-size: 1.5rem;
       }
     }
 
     li:nth-of-type(even) {
       text-align: end;
-      margin: 0 1.5rem 0 0.5rem;
+      margin: 0 1.5rem 0 3.5rem;
+      font-size: 1.2rem;
       font-style: italic;
       color: $text-alt;
     }
@@ -332,7 +334,6 @@ useHead({
   background: $secondary;
   margin: 3rem 0 0 0;
   padding: 1rem 0 1rem 0;
-  color: $text-dark;
 
   @media (min-width: 1024px) {
     padding: 1rem 5rem;
@@ -340,8 +341,7 @@ useHead({
   }
 
   .topicsHead {
-    font-size: 1.4rem;
-    margin: 0 1rem 0 1rem;
+    font-size: 2rem;
     text-align: center;
   }
 

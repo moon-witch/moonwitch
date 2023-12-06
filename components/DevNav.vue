@@ -141,7 +141,7 @@ const windowWidth = computed(() => {
     }
 
     .router-link-exact-active {
-      transition: 0.7s ease-in-out;
+      transition: 0.3s ease-in-out;
       color: $secondary;
     }
   }

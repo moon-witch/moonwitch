@@ -38,6 +38,8 @@
   width: 100vw;
   font-size: 25px;
   margin-top: 3rem;
+  position: absolute;
+  bottom: 0;
 
   .copyright {
     display: flex;
