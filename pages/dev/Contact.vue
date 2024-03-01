@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import {onMounted, ref} from "vue";
 
 useHead({
   link: [{ rel: "canonical", href: "https://moonwitch.art/" }],
 });
+
+/*onMounted(() => {
+  if (window.emailjs) {
+    window.emailjs.init({
+      publicKey: "CqY99CYQd8rD5pC2F",
+      throttle: 2000
+    })
+  }
+})*/
 
 const error = ref(false);
 const success = ref(false);

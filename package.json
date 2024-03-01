@@ -13,11 +13,13 @@
     "@types/node": "^18",
     "gsap": "^3.11.5",
     "nuxt": "3.4.3",
+    "nuxt-particles": "^0.1.5",
     "rimraf": "^5.0.5",
     "sass": "^1.62.1",
     "unplugin-icons": "^0.17.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@vueuse/core": "^10.5.0",
     "@vueuse/nuxt": "^10.5.0"
   }

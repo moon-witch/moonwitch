@@ -29,7 +29,8 @@ $border-bright: $primary;
 $border-dark: $secondary;
 
 // artist
-$a-primary: black;
+$a-primary: rgb(0, 0, 0);
+$a-primary-transparent: rgba(0, 0, 0, 0.92);
 $a-secondary: rgba(10, 10, 10, 0.55);
 $a-sun: #7A7A7A;
 

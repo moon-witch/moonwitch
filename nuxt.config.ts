@@ -1,8 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    'unplugin-icons/nuxt'
+    'unplugin-icons/nuxt',
+    'nuxt-particles'
   ],
+  particles: {
+    mode: 'slim'
+  },
   app: {
     pageTransition: {name: 'page', mode: 'out-in'},
     head: {
@@ -32,6 +36,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
+      script: [
+        {
+          type: "text/javascript",
+          src: "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        },
+      ]
     },
   },
   build: {

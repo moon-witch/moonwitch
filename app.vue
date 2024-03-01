@@ -3,6 +3,7 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 const cookieState = useState('cookies', (): boolean | null => null)
+const route = useRoute()
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -13,6 +14,15 @@ function acceptCookies() {
 function declineCookies() {
   cookieState.value = false;
 }
+
+const backgroundColor = computed(() => {
+  console.log(route.path)
+  if (route.path === '/') {
+    return 'transparent'
+  } else {
+    return 'black'
+  }
+})
 </script>
 
 <template>
@@ -27,9 +37,10 @@ function declineCookies() {
 html, body {
   margin: 0;
   padding: 0;
+  min-height: 100dvh;
   overflow-x: hidden;
   font-family: $font-text, serif;
-  background-color: black;
+  background-color: v-bind(backgroundColor);
 }
 
 .hide {

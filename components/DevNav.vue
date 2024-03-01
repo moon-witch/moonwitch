@@ -6,12 +6,13 @@ import IconContact from'~icons/prime/comment'
 import {useWindowSize} from "@vueuse/core";
 
 const route = ref('')
+const { width } = useWindowSize()
+
 const path = computed(() => {
   return route.value = useRoute().fullPath
 })
 
 const windowWidth = computed(() => {
-  const { width } = useWindowSize()
   return width.value
 })
 </script>

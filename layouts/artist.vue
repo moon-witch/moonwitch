@@ -42,6 +42,7 @@ watch(path, () => {
 .viewport {
   width: 100dvw;
   min-height: 100dvh;
+  background-color: $a-primary;
 
   .nav-toggle {
     display: none;

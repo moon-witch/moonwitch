@@ -3,11 +3,10 @@ import gsap from "gsap";
 import { onMounted, ref } from "vue";
 import IconAngleLeft from'~icons/prime/angle-left'
 import IconAngleRight from'~icons/prime/angle-right'
-import Branches from '../components/Branches.vue'
-import { useElementHover } from '@vueuse/core'
+import type { Container } from 'tsparticles-engine'
 
 useHead({
-  link: [{ rel: "canonical", href: "https://moonwitch.art/" }],
+  link: [{ rel: "canonical", href: "https://moonwitch.art/" }]
 });
 
 definePageMeta({
@@ -16,8 +15,6 @@ definePageMeta({
 
 const artist = ref()
 const developer = ref()
-const artistHovered = useElementHover(artist)
-const developerHovered = useElementHover(developer)
 
 const sol = ref<SVGSVGElement | null>(null);
 
@@ -52,10 +49,37 @@ function animatePaths(): void {
     });
   }
 }
+
+const options = {
+  fullScreen: {
+    enable: true,
+    zIndex: -1
+  },
+  particles: {
+    color: {
+      value: "#000"
+    },
+    links: {
+      color: "#000",
+      enable: true
+    },
+    move: {
+      enable: true
+    },
+    number: {
+      value: 100
+    }
+  }
+}
 </script>
 
 <template>
   <div>
+    <NuxtParticles
+        id="tsparticles"
+        :options="options"
+    >
+    </NuxtParticles>
     <div class="landing-container">
       <div class="link-container third">
         <NuxtLink to="artist/">
@@ -376,10 +400,19 @@ function animatePaths(): void {
 </template>
 
 <style scoped lang="scss">
+#tsparticles {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .landing-container {
   height: 100dvh;
   overflow: hidden;
-  background: $a-primary;
+  background: $a-primary-transparent;
   display: flex;
 
   .third {
@@ -422,7 +455,7 @@ function animatePaths(): void {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in-out;
-    border-radius: 50px;
+    border-radius: 5px;
 
     a {
       color: $text-dark;
@@ -435,9 +468,8 @@ function animatePaths(): void {
     }
 
     &:hover {
-      background: $a-secondary;
-      -webkit-box-shadow: inset 0px 0px 32px 10px #000000;
-      box-shadow: inset 0px 0px 32px 10px #000000;
+        background: $a-secondary;
+
       .link-box {
         gap: 1rem;
         color: white;
