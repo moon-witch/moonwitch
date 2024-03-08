@@ -2,8 +2,16 @@
 export default defineNuxtConfig({
   modules: [
     'unplugin-icons/nuxt',
-    'nuxt-particles'
+    'nuxt-particles',
+    '@nuxtjs/seo'
   ],
+  // @ts-ignore
+  site: {
+    url: 'https://www.moonwitch.art',
+    name: 'moonwitch webdesign & development',
+    description: 'Check out our projects and get in touch for awesome web development and designs!',
+    defaultLocale: 'en',
+  },
   particles: {
     mode: 'slim'
   },
