@@ -37,16 +37,17 @@
   font-size: 25px;
   margin-top: 3rem;
   position: absolute;
-  bottom: 0;
+  bottom: 0.25rem;
 
   .legal-link {
-    font-size: 12px;
-    margin: 0 4rem;
+    font-size: 16px;
+    margin: 0 1rem;
     color: $text-dark;
     text-decoration: none;
 
     @media (min-width: 710px) {
       font-size: 25px;
+      margin: 0 4rem;
     }
 
     &:hover {
@@ -69,14 +70,17 @@
   justify-content: space-between;
   align-items: center;
   font-family: $font-header, serif;
-  gap: 2rem;
+  gap: .5rem;
   
   @media (min-width: 740px) {
     padding: 0 2rem 0 2rem;
+    gap: 2rem;
   }
 
   .legal-name {
-    font-size: 19px;
+    font-size: 14px;
+    width: fit-content;
+    white-space: nowrap;
 
     @media (min-width: 710px) {
       font-size: 30px;
