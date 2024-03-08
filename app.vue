@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+
 const cookieState = useState('cookies', (): boolean | null => null)
 const route = useRoute()
 
@@ -29,6 +30,7 @@ const backgroundColor = computed(() => {
   <div class="app">
     <NuxtLayout>
       <NuxtPage/>
+      <CookieBanner v-if="!cookieState" @accepted="acceptCookies" @declined="declineCookies" />
     </NuxtLayout>
   </div>
 </template>

@@ -3,7 +3,7 @@ import {onClickOutside} from "@vueuse/core";
 
 const emit = defineEmits(['accepted', 'declined'])
 
-const banner = ref(null)
+const banner = ref()
 const outsideClicked = ref<any>(false);
 
 onClickOutside(banner, () => {
@@ -74,7 +74,7 @@ onClickOutside(banner, () => {
     }
 
     &.outsideClicked {
-      animation: bounce 1s;
+      animation: bounce .5s;
     }
 
     .buttons .button {
@@ -102,7 +102,7 @@ onClickOutside(banner, () => {
     bottom: 0.5rem;
   }
   50% {
-    bottom: 2rem;
+    bottom: 1.5rem;
   }
   100% {
     bottom: 0.5rem;
